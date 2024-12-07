@@ -18,22 +18,26 @@ Alice <-- Bob: Another authentication Response
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right_dotted)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_left_dotted)
-        (right)))))
+        (right)
+        (activity)))))
 
 =============
 alias
@@ -113,37 +117,44 @@ Foo -> Foo7: To queue
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))))
+        (right)
+        (activity)))))
 
 ===========
 color
@@ -184,18 +195,17 @@ Bob->L: Log transaction
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))
+        (right)
+        (activity)))
     (expression
       (sequence_diagram
         (left)
         (to_right)
-        (right)))))
-
-================
-inc
-================
+        (right)
+        (activity)))))

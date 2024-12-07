@@ -149,7 +149,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_LT_DASH] = "to_left",
   [anon_sym_LT_DASH_DASH] = "to_left_dotted",
   [anon_sym_COLON] = ":",
-  [aux_sym_sequence_diagram_token1] = "sequence_diagram_token1",
+  [aux_sym_sequence_diagram_token1] = "activity",
   [anon_sym_ATstartjson] = "@startjson",
   [anon_sym_AT] = "@",
   [aux_sym_json_token1] = "json_token1",
@@ -432,8 +432,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [aux_sym_sequence_diagram_token1] = {
-    .visible = false,
-    .named = false,
+    .visible = true,
+    .named = true,
   },
   [anon_sym_ATstartjson] = {
     .visible = true,

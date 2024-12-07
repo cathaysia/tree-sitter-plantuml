@@ -343,6 +343,10 @@
       "required": true,
       "types": [
         {
+          "type": "activity",
+          "named": true
+        },
+        {
           "type": "left",
           "named": true
         },
@@ -536,6 +540,10 @@
   {
     "type": "\\\"",
     "named": false
+  },
+  {
+    "type": "activity",
+    "named": true
   },
   {
     "type": "as",

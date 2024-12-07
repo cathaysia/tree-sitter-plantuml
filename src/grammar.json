@@ -399,8 +399,13 @@
                   "value": ":"
                 },
                 {
-                  "type": "PATTERN",
-                  "value": "[^\\r?\\n]+"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "PATTERN",
+                    "value": "[^\\r?\\n]+"
+                  },
+                  "named": true,
+                  "value": "activity"
                 }
               ]
             },

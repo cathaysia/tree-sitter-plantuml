@@ -68,7 +68,7 @@ module.exports = grammar({
           alias('<--', $.to_left_dotted),
         ),
         alias($.participant_name, $.right),
-        optional(seq(':', /[^\r?\n]+/)),
+        optional(seq(':', alias(/[^\r?\n]+/, $.activity))),
       ),
 
     json: $ => create_non_uml($, 'json'),
