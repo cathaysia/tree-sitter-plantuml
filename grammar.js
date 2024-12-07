@@ -4,7 +4,7 @@
 module.exports = grammar({
   name: 'plantuml',
 
-  extras: _ => [/\s/],
+  extras: $ => [/\s/, $.comment],
   rules: {
     diagram: $ =>
       choice(
@@ -81,6 +81,11 @@ module.exports = grammar({
     mindmap: $ => create_non_uml($, 'mindmap'),
     wbs: $ => create_non_uml($, 'wbs'),
     chen: $ => create_non_uml($, 'chen'),
+    comment: $ =>
+      choice(
+        seq("'", /[^\r\n]*\r?\n/),
+        seq("/'", repeat(/[^'],"'"/), prec(1, token("'/"))),
+      ),
 
     color: $ =>
       token(

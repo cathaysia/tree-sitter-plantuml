@@ -95,6 +95,11 @@
     "fields": {}
   },
   {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "diagram",
     "named": true,
     "root": true,
@@ -439,6 +444,18 @@
   },
   {
     "type": "#",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "'/",
+    "named": false
+  },
+  {
+    "type": "/'",
     "named": false
   },
   {

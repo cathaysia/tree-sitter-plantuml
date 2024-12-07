@@ -40,3 +40,5 @@
 
 (attribute
   (name) @variable)
+
+(comment) @comment
