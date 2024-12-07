@@ -42,3 +42,13 @@
   (name) @variable)
 
 (comment) @comment
+
+[
+  "group"
+  "end"
+  "loop"
+] @label
+
+(times) @number
+
+(label) @label

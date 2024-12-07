@@ -89,6 +89,14 @@
         {
           "type": "SYMBOL",
           "name": "attribute"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "group_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "loop_block"
         }
       ]
     },
@@ -968,6 +976,64 @@
               }
             }
           ]
+        }
+      ]
+    },
+    "group_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "group"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "\\S+"
+          },
+          "named": true,
+          "value": "label"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "expression"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "end"
+        }
+      ]
+    },
+    "loop_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "loop"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "\\d+"
+          },
+          "named": true,
+          "value": "times"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "expression"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "end"
         }
       ]
     },

@@ -208,6 +208,14 @@
           "named": true
         },
         {
+          "type": "group_block",
+          "named": true
+        },
+        {
+          "type": "loop_block",
+          "named": true
+        },
+        {
           "type": "sequence_diagram",
           "named": true
         }
@@ -233,6 +241,25 @@
     "type": "gantt_data",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "group_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "label",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "json",
@@ -264,6 +291,25 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "loop_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "times",
           "named": true
         }
       ]
@@ -579,12 +625,28 @@
     "named": true
   },
   {
+    "type": "end",
+    "named": false
+  },
+  {
+    "type": "group",
+    "named": false
+  },
+  {
     "type": "inc",
     "named": false
   },
   {
     "type": "kind",
     "named": true
+  },
+  {
+    "type": "label",
+    "named": true
+  },
+  {
+    "type": "loop",
+    "named": false
   },
   {
     "type": "new_name",
@@ -597,6 +659,10 @@
   {
     "type": "resume",
     "named": false
+  },
+  {
+    "type": "times",
+    "named": true
   },
   {
     "type": "to_left",

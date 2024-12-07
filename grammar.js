@@ -23,7 +23,8 @@ module.exports = grammar({
         $.chen,
       ),
     uml: $ => seq('@startuml', repeat($.expression), '@enduml'),
-    expression: $ => choice($.sequence_diagram, $.attribute),
+    expression: $ =>
+      choice($.sequence_diagram, $.attribute, $.group_block, $.loop_block),
     attribute: $ =>
       choice(
         prec.left(
@@ -86,7 +87,11 @@ module.exports = grammar({
         seq("'", /[^\r\n]*\r?\n/),
         seq("/'", repeat(/[^'],"'"/), prec(1, token("'/"))),
       ),
+    group_block: $ =>
+      seq('group', alias(/\S+/, $.label), repeat($.expression), 'end'),
 
+    loop_block: $ =>
+      seq('loop', alias(/\d+/, $.times), repeat($.expression), 'end'),
     color: $ =>
       token(
         choice(
