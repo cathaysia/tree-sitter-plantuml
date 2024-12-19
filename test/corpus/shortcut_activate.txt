@@ -1,0 +1,134 @@
+================
+shortcut
+================
+
+@startuml
+alice -> bob ++ : hello
+bob -> bob ++ : self call
+bob -> bib ++  #005500 : hello
+bob -> george ** : create
+return done
+return rc
+bob -> george !! : delete
+return success
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (color)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (return
+        (line)))
+    (expression
+      (return
+        (line)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (return
+        (line)))))
+
+========
+complex
+========
+
+@startuml
+alice   ->  bob     ++   : hello1
+bob     ->  charlie --++ : hello2
+charlie --> alice   --   : ok
+@enduml
+
+--------
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))))
+
+===========
+complex2
+===========
+
+@startuml
+alice -> bob   --++ #gold: hello
+bob   -> alice --++ #gold: you too
+alice -> bob   --: step1
+alice -> bob   : step2
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (color)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (color)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))))

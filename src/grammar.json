@@ -1881,6 +1881,30 @@
 					]
 				},
 				{
+					"type": "REPEAT",
+					"content": {
+						"type": "CHOICE",
+						"members": [
+							{
+								"type": "STRING",
+								"value": "++"
+							},
+							{
+								"type": "STRING",
+								"value": "--"
+							},
+							{
+								"type": "STRING",
+								"value": "**"
+							},
+							{
+								"type": "STRING",
+								"value": "!!"
+							}
+						]
+					}
+				},
+				{
 					"type": "CHOICE",
 					"members": [
 						{
@@ -1895,30 +1919,6 @@
 									"name": "color"
 								}
 							]
-						},
-						{
-							"type": "BLANK"
-						}
-					]
-				},
-				{
-					"type": "CHOICE",
-					"members": [
-						{
-							"type": "STRING",
-							"value": "**"
-						},
-						{
-							"type": "BLANK"
-						}
-					]
-				},
-				{
-					"type": "CHOICE",
-					"members": [
-						{
-							"type": "STRING",
-							"value": "!!"
 						},
 						{
 							"type": "BLANK"
