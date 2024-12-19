@@ -54,7 +54,7 @@ module.exports = grammar({
             /\w/,
           ),
         ),
-        seq('autonumber', repeat(/\d+/)),
+        seq('autonumber', repeat(/\d+/), optional($.string), /\r?\n/),
         'autonumber stop',
         seq(
           alias(
