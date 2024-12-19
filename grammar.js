@@ -42,7 +42,9 @@ module.exports = grammar({
 				$.delay_block,
 				$.space,
 				$.activation,
+				$.return,
 			),
+		return: ($) => seq("return", $.line),
 		space: ($) => choice(seq("|||", $._NEWLINE), seq("||", $.digit, "||")),
 		activation: ($) =>
 			seq(
@@ -157,6 +159,7 @@ module.exports = grammar({
 		boolean_literal: ($) => choice("true", "false"),
 		attribute: ($) =>
 			choice(
+				seq("autoactivate", choice("on", "off")),
 				prec.left(
 					seq(
 						"autonumber",
@@ -198,6 +201,9 @@ module.exports = grammar({
 				$.connector,
 				alias($.participant_name, $.right),
 				optional($.attr_alias),
+				optional(seq("#", $.color)),
+				optional("**"),
+				optional("!!"),
 				optional(seq(":", alias(/[^\r?\n]+/, $.activity))),
 			),
 		connector: ($) => choice(...generate_connectors($)),

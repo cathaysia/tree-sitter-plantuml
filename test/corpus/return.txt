@@ -1,0 +1,63 @@
+============
+return
+============
+
+@startuml
+autoactivate on
+alice -> bob : hello
+bob -> bob : self call
+bill -> bob #005500 : hello from thread 2
+bob -> george ** : create
+return done in thread 2
+return rc
+bob -> george !! : delete
+return success
+
+@enduml
+
+----------
+
+(diagram
+  (uml
+    (expression
+      (attribute))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (color)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (return
+        (line)))
+    (expression
+      (return
+        (line)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (return
+        (line)))))
