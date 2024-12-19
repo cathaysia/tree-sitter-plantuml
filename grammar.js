@@ -57,7 +57,8 @@ module.exports = grammar({
       ),
     attr_alias: $ => seq('as', alias(/\w+/, $.new_name)),
     attr_order: $ => seq('order', /\d+/),
-    string: $ => seq('"', repeat(choice(/[^"]/, '\\"')), '"'),
+    string: $ => seq('"', repeat(choice(/[^"]/, '\\"', $.escape_char)), '"'),
+    escape_char: $ => seq('\\', /./),
     participant_name: $ => choice(/\w+/, $.string),
     sequence_diagram: $ =>
       seq(
