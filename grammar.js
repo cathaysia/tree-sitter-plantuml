@@ -72,6 +72,7 @@ module.exports = grammar({
           alias('<--', $.to_left_dotted),
         ),
         alias($.participant_name, $.right),
+        optional($.attr_alias),
         optional(seq(':', alias(/[^\r?\n]+/, $.activity))),
       ),
 

@@ -341,3 +341,46 @@ Participant -> Bob
         (left)
         (to_right)
         (right)))))
+
+================
+non letter
+================
+
+@startuml
+Alice -> "Bob()" : Hello
+"Bob()" -> "This is very\nlong" as Long
+' You can also declare:
+' "Bob()" -> Long as "This is very\nlong"
+Long --> "Bob()" : ok
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (to_right)
+        (right
+          (string))
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left
+          (string))
+        (to_right)
+        (right
+          (string
+            (escape_char)))
+        (attr_alias
+          (new_name))))
+    (comment)
+    (comment)
+    (expression
+      (sequence_diagram
+        (left)
+        (to_right_dotted)
+        (right
+          (string))
+        (activity)))))

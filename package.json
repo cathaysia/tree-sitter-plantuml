@@ -8,7 +8,7 @@
     "install": "node-gyp-build",
     "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
-    "test": "pnpm build && tree-sitter test",
+    "test": "pnpm build && tree-sitter test -u",
     "build": "tree-sitter generate"
   },
   "keywords": [],

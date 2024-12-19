@@ -432,6 +432,10 @@
           "named": true
         },
         {
+          "type": "attr_alias",
+          "named": true
+        },
+        {
           "type": "left",
           "named": true
         },
