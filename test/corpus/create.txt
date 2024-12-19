@@ -1,0 +1,55 @@
+===========
+create
+===========
+
+@startuml
+Bob -> Alice : hello
+
+create Other
+Alice -> Other : new
+
+create control String
+Alice -> String
+note right : You can also put notes!
+
+Alice --> Bob : ok
+
+@enduml
+
+--------
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (create
+        (participant_name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (create
+        (participant_name)
+        (line)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (line_note
+        (line)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))))

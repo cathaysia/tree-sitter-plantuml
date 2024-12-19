@@ -153,6 +153,36 @@
 				{
 					"type": "SYMBOL",
 					"name": "return"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "create"
+				}
+			]
+		},
+		"create": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "create"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "participant_name"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "SYMBOL",
+							"name": "_NEWLINE"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "line"
+						}
+					]
 				}
 			]
 		},

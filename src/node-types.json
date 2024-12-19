@@ -241,6 +241,25 @@
 		}
 	},
 	{
+		"type": "create",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "line",
+					"named": true
+				},
+				{
+					"type": "participant_name",
+					"named": true
+				}
+			]
+		}
+	},
+	{
 		"type": "custom_label",
 		"named": true,
 		"fields": {},
@@ -425,6 +444,10 @@
 				},
 				{
 					"type": "block_rnote",
+					"named": true
+				},
+				{
+					"type": "create",
 					"named": true
 				},
 				{
@@ -1142,6 +1165,10 @@
 	{
 		"type": "content",
 		"named": true
+	},
+	{
+		"type": "create",
+		"named": false
 	},
 	{
 		"type": "deactivate",

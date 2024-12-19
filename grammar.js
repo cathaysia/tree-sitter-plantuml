@@ -43,7 +43,10 @@ module.exports = grammar({
 				$.space,
 				$.activation,
 				$.return,
+				$.create,
 			),
+		create: ($) =>
+			seq("create", $.participant_name, choice($._NEWLINE, $.line)),
 		return: ($) => seq("return", $.line),
 		space: ($) => choice(seq("|||", $._NEWLINE), seq("||", $.digit, "||")),
 		activation: ($) =>
