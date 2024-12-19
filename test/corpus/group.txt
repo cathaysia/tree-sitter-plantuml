@@ -119,9 +119,9 @@ end
         (activity)))
     (expression
       (group_block
-        (label)
-        (custom_label
-          (content))
+        (label
+          (custom_label
+            (content)))
         (expression
           (sequence_diagram
             (left)

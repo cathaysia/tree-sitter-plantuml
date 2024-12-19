@@ -34,7 +34,8 @@ module.exports = grammar({
 				$.alt_block,
 				$.note_block,
 			),
-		label: ($) => /\S+/,
+		label: ($) => seq(/\S[^\r?\n\[]*/, optional($.custom_label)),
+		custom_label: ($) => seq("[", alias(/[^\]]*/, $.content), "]"),
 		alt_block: ($) =>
 			seq(
 				"alt",
@@ -54,15 +55,7 @@ module.exports = grammar({
 				),
 			),
 		loop_block: ($) => seq("loop", $.label, repeat($.expression), "end"),
-		custom_label: ($) => seq("[", alias(/[^\]]*/, $.content), "]"),
-		group_block: ($) =>
-			seq(
-				"group",
-				$.label,
-				optional($.custom_label),
-				repeat($.expression),
-				"end",
-			),
+		group_block: ($) => seq("group", $.label, repeat($.expression), "end"),
 		// https://plantuml.com/skinparam
 		skinparam: ($) =>
 			seq(
