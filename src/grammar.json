@@ -113,6 +113,18 @@
 				{
 					"type": "SYMBOL",
 					"name": "line_note"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "block_note"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "block_rnote"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "block_hnote"
 				}
 			]
 		},
@@ -330,6 +342,231 @@
 				{
 					"type": "SYMBOL",
 					"name": "line"
+				}
+			]
+		},
+		"block_note": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "note"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "left"
+						},
+						{
+							"type": "STRING",
+							"value": "right"
+						},
+						{
+							"type": "STRING",
+							"value": "across"
+						},
+						{
+							"type": "SEQ",
+							"members": [
+								{
+									"type": "STRING",
+									"value": "over"
+								},
+								{
+									"type": "SEQ",
+									"members": [
+										{
+											"type": "SYMBOL",
+											"name": "participant_name"
+										},
+										{
+											"type": "REPEAT",
+											"content": {
+												"type": "SEQ",
+												"members": [
+													{
+														"type": "STRING",
+														"value": ","
+													},
+													{
+														"type": "SYMBOL",
+														"name": "participant_name"
+													}
+												]
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "SYMBOL",
+					"name": "_NEWLINE"
+				},
+				{
+					"type": "REPEAT",
+					"content": {
+						"type": "SYMBOL",
+						"name": "line"
+					}
+				},
+				{
+					"type": "STRING",
+					"value": "endnote"
+				}
+			]
+		},
+		"block_rnote": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "rnote"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "left"
+						},
+						{
+							"type": "STRING",
+							"value": "right"
+						},
+						{
+							"type": "STRING",
+							"value": "across"
+						},
+						{
+							"type": "SEQ",
+							"members": [
+								{
+									"type": "STRING",
+									"value": "over"
+								},
+								{
+									"type": "SEQ",
+									"members": [
+										{
+											"type": "SYMBOL",
+											"name": "participant_name"
+										},
+										{
+											"type": "REPEAT",
+											"content": {
+												"type": "SEQ",
+												"members": [
+													{
+														"type": "STRING",
+														"value": ","
+													},
+													{
+														"type": "SYMBOL",
+														"name": "participant_name"
+													}
+												]
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "SYMBOL",
+					"name": "_NEWLINE"
+				},
+				{
+					"type": "REPEAT",
+					"content": {
+						"type": "SYMBOL",
+						"name": "line"
+					}
+				},
+				{
+					"type": "STRING",
+					"value": "endrnote"
+				}
+			]
+		},
+		"block_hnote": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "note"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "left"
+						},
+						{
+							"type": "STRING",
+							"value": "right"
+						},
+						{
+							"type": "STRING",
+							"value": "across"
+						},
+						{
+							"type": "SEQ",
+							"members": [
+								{
+									"type": "STRING",
+									"value": "over"
+								},
+								{
+									"type": "SEQ",
+									"members": [
+										{
+											"type": "SYMBOL",
+											"name": "participant_name"
+										},
+										{
+											"type": "REPEAT",
+											"content": {
+												"type": "SEQ",
+												"members": [
+													{
+														"type": "STRING",
+														"value": ","
+													},
+													{
+														"type": "SYMBOL",
+														"name": "participant_name"
+													}
+												]
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "SYMBOL",
+					"name": "_NEWLINE"
+				},
+				{
+					"type": "REPEAT",
+					"content": {
+						"type": "SYMBOL",
+						"name": "line"
+					}
+				},
+				{
+					"type": "STRING",
+					"value": "endhnote"
 				}
 			]
 		},

@@ -33,6 +33,9 @@ module.exports = grammar({
 				$.skinparam,
 				$.alt_block,
 				$.line_note,
+				$.block_note,
+				$.block_rnote,
+				$.block_hnote,
 			),
 		label: ($) => seq(/\S[^\r?\n\[]*/, optional($.custom_label)),
 		custom_label: ($) => seq("[", alias(/[^\]]*/, $.content), "]"),
@@ -59,6 +62,45 @@ module.exports = grammar({
 				optional(seq("#", $.color)),
 				":",
 				$.line,
+			),
+		block_note: ($) =>
+			seq(
+				"note",
+				choice(
+					"left",
+					"right",
+					"across",
+					seq("over", commaSep1($.participant_name)),
+				),
+				$._NEWLINE,
+				repeat($.line),
+				"endnote",
+			),
+		block_rnote: ($) =>
+			seq(
+				"rnote",
+				choice(
+					"left",
+					"right",
+					"across",
+					seq("over", commaSep1($.participant_name)),
+				),
+				$._NEWLINE,
+				repeat($.line),
+				"endrnote",
+			),
+		block_hnote: ($) =>
+			seq(
+				"note",
+				choice(
+					"left",
+					"right",
+					"across",
+					seq("over", commaSep1($.participant_name)),
+				),
+				$._NEWLINE,
+				repeat($.line),
+				"endhnote",
 			),
 		loop_block: ($) => seq("loop", $.label, repeat($.expression), "end"),
 		group_block: ($) => seq("group", $.label, repeat($.expression), "end"),

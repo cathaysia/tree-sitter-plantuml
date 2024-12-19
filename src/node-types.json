@@ -88,6 +88,63 @@
 		}
 	},
 	{
+		"type": "block_hnote",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": false,
+			"types": [
+				{
+					"type": "line",
+					"named": true
+				},
+				{
+					"type": "participant_name",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "block_note",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": false,
+			"types": [
+				{
+					"type": "line",
+					"named": true
+				},
+				{
+					"type": "participant_name",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "block_rnote",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": false,
+			"types": [
+				{
+					"type": "line",
+					"named": true
+				},
+				{
+					"type": "participant_name",
+					"named": true
+				}
+			]
+		}
+	},
+	{
 		"type": "boolean_literal",
 		"named": true,
 		"fields": {}
@@ -282,6 +339,18 @@
 				},
 				{
 					"type": "attribute",
+					"named": true
+				},
+				{
+					"type": "block_hnote",
+					"named": true
+				},
+				{
+					"type": "block_note",
+					"named": true
+				},
+				{
+					"type": "block_rnote",
 					"named": true
 				},
 				{
@@ -877,6 +946,18 @@
 	},
 	{
 		"type": "end",
+		"named": false
+	},
+	{
+		"type": "endhnote",
+		"named": false
+	},
+	{
+		"type": "endnote",
+		"named": false
+	},
+	{
+		"type": "endrnote",
 		"named": false
 	},
 	{
