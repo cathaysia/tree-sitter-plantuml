@@ -36,7 +36,9 @@ module.exports = grammar({
 				$.block_note,
 				$.block_rnote,
 				$.block_hnote,
+				$.separator,
 			),
+		separator: ($) => seq("==", /[^=]+/, "==", $._NEWLINE),
 		label: ($) => seq(/\S[^\r?\n\[]*/, optional($.custom_label)),
 		custom_label: ($) => seq("[", alias(/[^\]]*/, $.content), "]"),
 		alt_block: ($) =>

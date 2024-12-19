@@ -366,6 +366,10 @@
 					"named": true
 				},
 				{
+					"type": "separator",
+					"named": true
+				},
+				{
 					"type": "sequence_diagram",
 					"named": true
 				},
@@ -613,6 +617,11 @@
 		}
 	},
 	{
+		"type": "separator",
+		"named": true,
+		"fields": {}
+	},
+	{
 		"type": "sequence_diagram",
 		"named": true,
 		"fields": {},
@@ -778,6 +787,10 @@
 	},
 	{
 		"type": "<<",
+		"named": false
+	},
+	{
+		"type": "==",
 		"named": false
 	},
 	{

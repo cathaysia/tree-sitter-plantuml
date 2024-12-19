@@ -125,6 +125,31 @@
 				{
 					"type": "SYMBOL",
 					"name": "block_hnote"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "separator"
+				}
+			]
+		},
+		"separator": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "=="
+				},
+				{
+					"type": "PATTERN",
+					"value": "[^=]+"
+				},
+				{
+					"type": "STRING",
+					"value": "=="
+				},
+				{
+					"type": "SYMBOL",
+					"name": "_NEWLINE"
 				}
 			]
 		},
