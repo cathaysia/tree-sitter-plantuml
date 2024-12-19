@@ -40,7 +40,9 @@ module.exports = grammar({
 				$.ref_line,
 				$.ref_block,
 				$.delay_block,
+				$.space,
 			),
+		space: ($) => choice(seq("|||", $._NEWLINE), seq("||", $.digit, "||")),
 		delay_title: ($) =>
 			seq(
 				"...",

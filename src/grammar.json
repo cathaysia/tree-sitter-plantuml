@@ -141,6 +141,45 @@
 				{
 					"type": "SYMBOL",
 					"name": "delay_block"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "space"
+				}
+			]
+		},
+		"space": {
+			"type": "CHOICE",
+			"members": [
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "|||"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "_NEWLINE"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "||"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "digit"
+						},
+						{
+							"type": "STRING",
+							"value": "||"
+						}
+					]
 				}
 			]
 		},
