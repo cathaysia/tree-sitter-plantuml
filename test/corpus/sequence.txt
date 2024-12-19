@@ -17,25 +17,25 @@ Alice <-- Bob: Another authentication Response
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right_dotted)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_left_dotted)
+        (connector)
         (right)
         (activity)))))
 
@@ -116,43 +116,43 @@ Foo -> Foo7: To queue
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))))
 
@@ -195,19 +195,19 @@ Bob->L: Log transaction
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))))
 
@@ -258,19 +258,19 @@ Bob->L: Log transaction
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)
         (activity)))))
 
@@ -339,7 +339,7 @@ Participant -> Bob
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right)))))
 
 ================
@@ -361,7 +361,7 @@ Long --> "Bob()" : ok
     (expression
       (sequence_diagram
         (left)
-        (to_right)
+        (connector)
         (right
           (string))
         (activity)))
@@ -369,7 +369,7 @@ Long --> "Bob()" : ok
       (sequence_diagram
         (left
           (string))
-        (to_right)
+        (connector)
         (right
           (string
             (escape_char)))
@@ -380,7 +380,81 @@ Long --> "Bob()" : ok
     (expression
       (sequence_diagram
         (left)
-        (to_right_dotted)
+        (connector)
         (right
           (string))
         (activity)))))
+
+==========
+connector
+==========
+
+@startuml
+Bob ->x Alice
+Bob -> Alice
+Bob ->> Alice
+Bob -\ Alice
+Bob \\- Alice
+Bob //-- Alice
+
+Bob ->o Alice
+Bob o\\-- Alice
+
+Bob <-> Alice
+Bob <->o Alice
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)))))

@@ -24,7 +24,26 @@ module.exports = grammar({
       ),
     uml: $ => seq('@startuml', repeat($.expression), '@enduml'),
     expression: $ =>
-      choice($.sequence_diagram, $.attribute, $.group_block, $.loop_block),
+      choice(
+        $.sequence_diagram,
+        $.attribute,
+        $.group_block,
+        $.loop_block,
+        $.skinparam,
+      ),
+    // https://plantuml.com/skinparam
+    skinparam: $ =>
+      seq(
+        'skinparam',
+        choice(
+          seq(
+            'sequenceMessageAlign',
+            alias(choice('left', 'right', 'center'), $.align),
+          ),
+          seq('responseMessageBelowArrow', $.boolean_literal),
+        ),
+      ),
+    boolean_literal: $ => choice('true', 'false'),
     attribute: $ =>
       choice(
         prec.left(
@@ -65,12 +84,7 @@ module.exports = grammar({
     sequence_diagram: $ =>
       seq(
         alias($.participant_name, $.left),
-        choice(
-          alias('->', $.to_right),
-          alias('-->', $.to_right_dotted),
-          alias('<-', $.to_left),
-          alias('<--', $.to_left_dotted),
-        ),
+        alias(choice(...generate_connectors()), $.connector),
         alias($.participant_name, $.right),
         optional($.attr_alias),
         optional(seq(':', alias(/[^\r?\n]+/, $.activity))),
@@ -413,4 +427,58 @@ function create_non_uml($, ty) {
     token(prec(1, `@end${ty}`)),
     repeat(/\r?\n/),
   );
+}
+
+function generate_connectors() {
+  const res = [];
+  // to_right
+  {
+    const c = ['-', '--'];
+    const arr = ['>', '>>', '\\', '\\\\', '/', '//'];
+    const append = ['', 'o', 'x', 'ox'];
+
+    for (const i of c) {
+      for (const j of arr) {
+        for (const k of append) {
+          res.push(`${i}${j}${k}`);
+        }
+      }
+    }
+  }
+  // to left
+  {
+    const c = ['-', '--'];
+    const arr = ['<', '<<', '/', '//', '\\', '\\\\'];
+    const append = ['', 'o', 'x', 'xo'];
+
+    for (const i of c) {
+      for (const j of arr) {
+        for (const k of append) {
+          res.push(`${k}${j}${i}`);
+        }
+      }
+    }
+  }
+  // two ways
+  {
+    const c = ['-', '--'];
+    const left = ['<', '<<', '/', '//', '\\', '\\\\'];
+    const right = ['>', '>>', '\\', '\\\\', '/', '//'];
+    const lappend = ['', 'o', 'x', 'xo'];
+    const rappend = ['', 'o', 'x', 'ox'];
+
+    for (const i of c) {
+      for (const la of left) {
+        for (const ra of right) {
+          for (const lx of lappend) {
+            for (const rx of rappend) {
+              res.push(`${la}${i}${ra}${rx}${lx}`);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return res;
 }

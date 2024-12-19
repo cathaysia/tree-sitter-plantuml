@@ -97,6 +97,81 @@
         {
           "type": "SYMBOL",
           "name": "loop_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "skinparam"
+        }
+      ]
+    },
+    "skinparam": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "skinparam"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "sequenceMessageAlign"
+                },
+                {
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "left"
+                      },
+                      {
+                        "type": "STRING",
+                        "value": "right"
+                      },
+                      {
+                        "type": "STRING",
+                        "value": "center"
+                      }
+                    ]
+                  },
+                  "named": true,
+                  "value": "align"
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "responseMessageBelowArrow"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "boolean_literal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "boolean_literal": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "true"
+        },
+        {
+          "type": "STRING",
+          "value": "false"
         }
       ]
     },
@@ -410,45 +485,5006 @@
           "value": "left"
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "ALIAS",
-              "content": {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
                 "type": "STRING",
                 "value": "->"
               },
-              "named": true,
-              "value": "to_right"
-            },
-            {
-              "type": "ALIAS",
-              "content": {
+              {
+                "type": "STRING",
+                "value": "->o"
+              },
+              {
+                "type": "STRING",
+                "value": "->x"
+              },
+              {
+                "type": "STRING",
+                "value": "->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "->>"
+              },
+              {
+                "type": "STRING",
+                "value": "->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "-\\"
+              },
+              {
+                "type": "STRING",
+                "value": "-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "-\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "-/"
+              },
+              {
+                "type": "STRING",
+                "value": "-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "-//"
+              },
+              {
+                "type": "STRING",
+                "value": "-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "-//ox"
+              },
+              {
                 "type": "STRING",
                 "value": "-->"
               },
-              "named": true,
-              "value": "to_right_dotted"
-            },
-            {
-              "type": "ALIAS",
-              "content": {
+              {
+                "type": "STRING",
+                "value": "-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "-->>"
+              },
+              {
+                "type": "STRING",
+                "value": "-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "--\\"
+              },
+              {
+                "type": "STRING",
+                "value": "--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "--\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "--/"
+              },
+              {
+                "type": "STRING",
+                "value": "--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "--//"
+              },
+              {
+                "type": "STRING",
+                "value": "--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "--//ox"
+              },
+              {
                 "type": "STRING",
                 "value": "<-"
               },
-              "named": true,
-              "value": "to_left"
-            },
-            {
-              "type": "ALIAS",
-              "content": {
+              {
+                "type": "STRING",
+                "value": "o<-"
+              },
+              {
+                "type": "STRING",
+                "value": "x<-"
+              },
+              {
+                "type": "STRING",
+                "value": "xo<-"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-"
+              },
+              {
+                "type": "STRING",
+                "value": "o<<-"
+              },
+              {
+                "type": "STRING",
+                "value": "x<<-"
+              },
+              {
+                "type": "STRING",
+                "value": "xo<<-"
+              },
+              {
+                "type": "STRING",
+                "value": "/-"
+              },
+              {
+                "type": "STRING",
+                "value": "o/-"
+              },
+              {
+                "type": "STRING",
+                "value": "x/-"
+              },
+              {
+                "type": "STRING",
+                "value": "xo/-"
+              },
+              {
+                "type": "STRING",
+                "value": "//-"
+              },
+              {
+                "type": "STRING",
+                "value": "o//-"
+              },
+              {
+                "type": "STRING",
+                "value": "x//-"
+              },
+              {
+                "type": "STRING",
+                "value": "xo//-"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-"
+              },
+              {
+                "type": "STRING",
+                "value": "o\\-"
+              },
+              {
+                "type": "STRING",
+                "value": "x\\-"
+              },
+              {
+                "type": "STRING",
+                "value": "xo\\-"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-"
+              },
+              {
+                "type": "STRING",
+                "value": "o\\\\-"
+              },
+              {
+                "type": "STRING",
+                "value": "x\\\\-"
+              },
+              {
+                "type": "STRING",
+                "value": "xo\\\\-"
+              },
+              {
                 "type": "STRING",
                 "value": "<--"
               },
-              "named": true,
-              "value": "to_left_dotted"
-            }
-          ]
+              {
+                "type": "STRING",
+                "value": "o<--"
+              },
+              {
+                "type": "STRING",
+                "value": "x<--"
+              },
+              {
+                "type": "STRING",
+                "value": "xo<--"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--"
+              },
+              {
+                "type": "STRING",
+                "value": "o<<--"
+              },
+              {
+                "type": "STRING",
+                "value": "x<<--"
+              },
+              {
+                "type": "STRING",
+                "value": "xo<<--"
+              },
+              {
+                "type": "STRING",
+                "value": "/--"
+              },
+              {
+                "type": "STRING",
+                "value": "o/--"
+              },
+              {
+                "type": "STRING",
+                "value": "x/--"
+              },
+              {
+                "type": "STRING",
+                "value": "xo/--"
+              },
+              {
+                "type": "STRING",
+                "value": "//--"
+              },
+              {
+                "type": "STRING",
+                "value": "o//--"
+              },
+              {
+                "type": "STRING",
+                "value": "x//--"
+              },
+              {
+                "type": "STRING",
+                "value": "xo//--"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--"
+              },
+              {
+                "type": "STRING",
+                "value": "o\\--"
+              },
+              {
+                "type": "STRING",
+                "value": "x\\--"
+              },
+              {
+                "type": "STRING",
+                "value": "xo\\--"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--"
+              },
+              {
+                "type": "STRING",
+                "value": "o\\\\--"
+              },
+              {
+                "type": "STRING",
+                "value": "x\\\\--"
+              },
+              {
+                "type": "STRING",
+                "value": "xo\\\\--"
+              },
+              {
+                "type": "STRING",
+                "value": "<->"
+              },
+              {
+                "type": "STRING",
+                "value": "<->o"
+              },
+              {
+                "type": "STRING",
+                "value": "<->x"
+              },
+              {
+                "type": "STRING",
+                "value": "<->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<->o"
+              },
+              {
+                "type": "STRING",
+                "value": "<->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->x"
+              },
+              {
+                "type": "STRING",
+                "value": "<->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->"
+              },
+              {
+                "type": "STRING",
+                "value": "/->o"
+              },
+              {
+                "type": "STRING",
+                "value": "/->x"
+              },
+              {
+                "type": "STRING",
+                "value": "/->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/->o"
+              },
+              {
+                "type": "STRING",
+                "value": "/->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->x"
+              },
+              {
+                "type": "STRING",
+                "value": "/->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->"
+              },
+              {
+                "type": "STRING",
+                "value": "//->o"
+              },
+              {
+                "type": "STRING",
+                "value": "//->x"
+              },
+              {
+                "type": "STRING",
+                "value": "//->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//->o"
+              },
+              {
+                "type": "STRING",
+                "value": "//->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->x"
+              },
+              {
+                "type": "STRING",
+                "value": "//->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<-->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<--//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<-->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "<<--//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/-->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "/--//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//-->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "//--//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\-->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\--//oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\-->>oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--\\\\oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--/oxxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//o"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//oo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//x"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//ox"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//xx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//oxx"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//xo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//oxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//xxo"
+              },
+              {
+                "type": "STRING",
+                "value": "\\\\--//oxxo"
+              }
+            ]
+          },
+          "named": true,
+          "value": "connector"
         },
         {
           "type": "ALIAS",

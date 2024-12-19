@@ -61,3 +61,5 @@
 
 (attr_order
   (value) @number)
+
+(connector) @punctuation.bracket
