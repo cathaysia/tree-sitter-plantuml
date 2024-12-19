@@ -28,12 +28,25 @@ end note
         (right)
         (activity)))
     (expression
-      (note_block
-        (line)
-        (line)
-        (line)
-        (line)
-        (line)
+      (line_note
+        (line)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (line_note
+        (line)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (block_note
         (line)
         (line)
         (line)))))
@@ -76,16 +89,29 @@ end note
         (kind)
         (name)))
     (expression
-      (note_block
-        (line)
+      (block_note
+        (participant_name)
+        (color)
         (line)
         (line)))
     (expression
-      (note_block
-        (line)
-        (line)
-        (line)
-        (line)
+      (line_note
+        (participant_name)
+        (line)))
+    (expression
+      (line_note
+        (participant_name)
+        (line)))
+    (expression
+      (line_note
+        (participant_name)
+        (participant_name)
+        (color)
+        (line)))
+    (expression
+      (block_note
+        (participant_name)
+        (participant_name)
         (line)
         (line)
         (line)))))

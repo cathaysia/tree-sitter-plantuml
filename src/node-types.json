@@ -96,6 +96,10 @@
 			"required": false,
 			"types": [
 				{
+					"type": "color",
+					"named": true
+				},
+				{
 					"type": "line",
 					"named": true
 				},
@@ -115,6 +119,10 @@
 			"required": false,
 			"types": [
 				{
+					"type": "color",
+					"named": true
+				},
+				{
 					"type": "line",
 					"named": true
 				},
@@ -133,6 +141,10 @@
 			"multiple": true,
 			"required": false,
 			"types": [
+				{
+					"type": "color",
+					"named": true
+				},
 				{
 					"type": "line",
 					"named": true
@@ -1059,7 +1071,19 @@
 		"named": false
 	},
 	{
+		"type": "end hnote",
+		"named": false
+	},
+	{
+		"type": "end note",
+		"named": false
+	},
+	{
 		"type": "end ref",
+		"named": false
+	},
+	{
+		"type": "end rnote",
 		"named": false
 	},
 	{
@@ -1116,6 +1140,10 @@
 	},
 	{
 		"type": "o",
+		"named": false
+	},
+	{
+		"type": "of",
 		"named": false
 	},
 	{
