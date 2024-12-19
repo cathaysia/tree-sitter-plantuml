@@ -287,8 +287,13 @@
           "value": "order"
         },
         {
-          "type": "PATTERN",
-          "value": "\\d+"
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "\\d+"
+          },
+          "named": true,
+          "value": "value"
         }
       ]
     },

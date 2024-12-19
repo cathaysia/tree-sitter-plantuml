@@ -33,6 +33,7 @@
   "resume"
   "autonumber stop"
   "as"
+  "order"
 ] @attribute
 
 (attribute
@@ -54,3 +55,9 @@
 (label) @label
 
 (escape_char) @string.escape
+
+(attr_alias
+  (new_name) @variable)
+
+(attr_order
+  (value) @number)

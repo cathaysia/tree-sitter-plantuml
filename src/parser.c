@@ -16,12 +16,12 @@
 #define STATE_COUNT 199
 #define LARGE_STATE_COUNT 2
 #define SYMBOL_COUNT 95
-#define ALIAS_COUNT 14
+#define ALIAS_COUNT 15
 #define TOKEN_COUNT 66
 #define EXTERNAL_TOKEN_COUNT 0
 #define FIELD_COUNT 0
 #define MAX_ALIAS_SEQUENCE_LENGTH 5
-#define PRODUCTION_ID_COUNT 14
+#define PRODUCTION_ID_COUNT 15
 
 enum ts_symbol_identifiers {
   anon_sym_ATstartuml = 1,
@@ -130,8 +130,9 @@ enum ts_symbol_identifiers {
   alias_sym_regex_data = 104,
   alias_sym_right = 105,
   alias_sym_times = 106,
-  alias_sym_wbs_data = 107,
-  alias_sym_yaml_data = 108,
+  alias_sym_value = 107,
+  alias_sym_wbs_data = 108,
+  alias_sym_yaml_data = 109,
 };
 
 static const char * const ts_symbol_names[] = {
@@ -242,6 +243,7 @@ static const char * const ts_symbol_names[] = {
   [alias_sym_regex_data] = "regex_data",
   [alias_sym_right] = "right",
   [alias_sym_times] = "times",
+  [alias_sym_value] = "value",
   [alias_sym_wbs_data] = "wbs_data",
   [alias_sym_yaml_data] = "yaml_data",
 };
@@ -354,6 +356,7 @@ static const TSSymbol ts_symbol_map[] = {
   [alias_sym_regex_data] = alias_sym_regex_data,
   [alias_sym_right] = alias_sym_right,
   [alias_sym_times] = alias_sym_times,
+  [alias_sym_value] = alias_sym_value,
   [alias_sym_wbs_data] = alias_sym_wbs_data,
   [alias_sym_yaml_data] = alias_sym_yaml_data,
 };
@@ -787,6 +790,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
+  [alias_sym_value] = {
+    .visible = true,
+    .named = true,
+  },
   [alias_sym_wbs_data] = {
     .visible = true,
     .named = true,
@@ -838,6 +845,9 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   },
   [13] = {
     [1] = alias_sym_new_name,
+  },
+  [14] = {
+    [1] = alias_sym_value,
   },
 };
 
@@ -9365,8 +9375,8 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [181] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_attribute_repeat2, 1, 0, 0),
   [183] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_attr_alias, 2, 0, 13),
   [185] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_attr_alias, 2, 0, 13),
-  [187] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_attr_order, 2, 0, 0),
-  [189] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_attr_order, 2, 0, 0),
+  [187] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_attr_order, 2, 0, 14),
+  [189] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_attr_order, 2, 0, 14),
   [191] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_attribute_repeat1, 2, 0, 0),
   [193] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_attribute_repeat1, 2, 0, 0), SHIFT_REPEAT(40),
   [196] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_attribute_repeat1, 2, 0, 0),
