@@ -289,11 +289,11 @@
 					"named": true
 				},
 				{
-					"type": "loop_block",
+					"type": "line_note",
 					"named": true
 				},
 				{
-					"type": "note_block",
+					"type": "loop_block",
 					"named": true
 				},
 				{
@@ -402,6 +402,29 @@
 		"fields": {}
 	},
 	{
+		"type": "line_note",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "color",
+					"named": true
+				},
+				{
+					"type": "line",
+					"named": true
+				},
+				{
+					"type": "participant_name",
+					"named": true
+				}
+			]
+		}
+	},
+	{
 		"type": "loop_block",
 		"named": true,
 		"fields": {},
@@ -471,19 +494,15 @@
 		}
 	},
 	{
-		"type": "note_block",
+		"type": "participant_name",
 		"named": true,
 		"fields": {},
 		"children": {
-			"multiple": true,
+			"multiple": false,
 			"required": false,
 			"types": [
 				{
-					"type": "color",
-					"named": true
-				},
-				{
-					"type": "line",
+					"type": "string",
 					"named": true
 				}
 			]
@@ -657,6 +676,10 @@
 		"named": false
 	},
 	{
+		"type": ",",
+		"named": false
+	},
+	{
 		"type": "-",
 		"named": false
 	},
@@ -813,6 +836,10 @@
 		"named": false
 	},
 	{
+		"type": "across",
+		"named": false
+	},
+	{
 		"type": "activity",
 		"named": true
 	},
@@ -853,15 +880,15 @@
 		"named": false
 	},
 	{
-		"type": "end note",
-		"named": false
-	},
-	{
 		"type": "false",
 		"named": false
 	},
 	{
 		"type": "group",
+		"named": false
+	},
+	{
+		"type": "hnote",
 		"named": false
 	},
 	{
@@ -874,10 +901,6 @@
 	},
 	{
 		"type": "left",
-		"named": false
-	},
-	{
-		"type": "left over",
 		"named": false
 	},
 	{
@@ -921,7 +944,7 @@
 		"named": false
 	},
 	{
-		"type": "right over",
+		"type": "rnote",
 		"named": false
 	},
 	{
