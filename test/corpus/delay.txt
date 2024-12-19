@@ -1,0 +1,41 @@
+=============
+delay
+=============
+
+@startuml
+
+Alice -> Bob: Authentication Request
+...
+Bob --> Alice: Authentication Response
+...5 minutes later...
+Bob --> Alice: Good Bye !
+
+@enduml
+
+---
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (delay_block
+        (delay_title)
+        (expression
+          (sequence_diagram
+            (left)
+            (connector)
+            (right)
+            (activity)))
+        (delay_title
+          (content))))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))))

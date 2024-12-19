@@ -39,7 +39,12 @@ module.exports = grammar({
 				$.separator,
 				$.ref_line,
 				$.ref_block,
+				$.delay_block,
 			),
+		delay_title: ($) =>
+			seq("...", optional(seq(alias(/\S[^\r?\n\.]+/, $.content), "...")),$._NEWLINE),
+		delay_block: ($) =>
+			prec.left(seq($.delay_title, repeat($.expression), $.delay_title)),
 		ref_line: ($) =>
 			seq("ref", "over", commaSep1($.participant_name), ":", $.line),
 		ref_block: ($) =>
