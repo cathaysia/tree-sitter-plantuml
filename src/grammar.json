@@ -157,6 +157,36 @@
 				{
 					"type": "SYMBOL",
 					"name": "create"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "pragma"
+				}
+			]
+		},
+		"pragma": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "!pragma"
+				},
+				{
+					"type": "STRING",
+					"value": "teoz"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "true"
+						},
+						{
+							"type": "STRING",
+							"value": "false"
+						}
+					]
 				}
 			]
 		},
@@ -1830,22 +1860,60 @@
 				}
 			]
 		},
-		"participant_name": {
-			"type": "CHOICE",
+		"anchor": {
+			"type": "SEQ",
 			"members": [
 				{
-					"type": "PATTERN",
-					"value": "\\w+"
+					"type": "STRING",
+					"value": "{"
 				},
 				{
-					"type": "SYMBOL",
-					"name": "string"
+					"type": "PATTERN",
+					"value": "[^}]+"
+				},
+				{
+					"type": "STRING",
+					"value": "}"
+				}
+			]
+		},
+		"participant_name": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "SYMBOL",
+							"name": "anchor"
+						},
+						{
+							"type": "PATTERN",
+							"value": "\\w+"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "string"
+						}
+					]
 				}
 			]
 		},
 		"sequence_diagram": {
 			"type": "SEQ",
 			"members": [
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "SYMBOL",
+							"name": "anchor"
+						},
+						{
+							"type": "BLANK"
+						}
+					]
+				},
 				{
 					"type": "ALIAS",
 					"content": {

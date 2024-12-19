@@ -38,6 +38,11 @@
 		}
 	},
 	{
+		"type": "anchor",
+		"named": true,
+		"fields": {}
+	},
+	{
 		"type": "attr_alias",
 		"named": true,
 		"fields": {},
@@ -467,6 +472,10 @@
 					"named": true
 				},
 				{
+					"type": "pragma",
+					"named": true
+				},
+				{
 					"type": "ref_block",
 					"named": true
 				},
@@ -580,6 +589,10 @@
 			"required": false,
 			"types": [
 				{
+					"type": "anchor",
+					"named": true
+				},
+				{
 					"type": "string",
 					"named": true
 				}
@@ -677,6 +690,10 @@
 			"required": false,
 			"types": [
 				{
+					"type": "anchor",
+					"named": true
+				},
+				{
 					"type": "string",
 					"named": true
 				}
@@ -692,11 +709,20 @@
 			"required": false,
 			"types": [
 				{
+					"type": "anchor",
+					"named": true
+				},
+				{
 					"type": "string",
 					"named": true
 				}
 			]
 		}
+	},
+	{
+		"type": "pragma",
+		"named": true,
+		"fields": {}
 	},
 	{
 		"type": "ref_block",
@@ -780,6 +806,10 @@
 			"required": false,
 			"types": [
 				{
+					"type": "anchor",
+					"named": true
+				},
+				{
 					"type": "string",
 					"named": true
 				}
@@ -801,6 +831,10 @@
 			"types": [
 				{
 					"type": "activity",
+					"named": true
+				},
+				{
+					"type": "anchor",
 					"named": true
 				},
 				{
@@ -936,6 +970,10 @@
 	},
 	{
 		"type": "!!",
+		"named": false
+	},
+	{
+		"type": "!pragma",
 		"named": false
 	},
 	{
@@ -1319,6 +1357,10 @@
 		"named": false
 	},
 	{
+		"type": "teoz",
+		"named": false
+	},
+	{
 		"type": "true",
 		"named": false
 	},
@@ -1335,11 +1377,19 @@
 		"named": false
 	},
 	{
+		"type": "{",
+		"named": false
+	},
+	{
 		"type": "||",
 		"named": false
 	},
 	{
 		"type": "|||",
+		"named": false
+	},
+	{
+		"type": "}",
 		"named": false
 	}
 ]

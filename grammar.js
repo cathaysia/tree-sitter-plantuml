@@ -44,7 +44,9 @@ module.exports = grammar({
 				$.activation,
 				$.return,
 				$.create,
+				$.pragma,
 			),
+		pragma: ($) => seq("!pragma", "teoz", choice("true", "false")),
 		create: ($) =>
 			seq("create", $.participant_name, choice($._NEWLINE, $.line)),
 		return: ($) => seq("return", $.line),
@@ -197,9 +199,11 @@ module.exports = grammar({
 		attr_order: ($) => seq("order", alias(/\d+/, $.value)),
 		string: ($) => seq('"', repeat(choice(/[^"]/, '\\"', $.escape_char)), '"'),
 		escape_char: ($) => seq("\\", /./),
-		participant_name: ($) => choice(/\w+/, $.string),
+		anchor: ($) => seq("{", /[^}]+/, "}"),
+		participant_name: ($) => seq(choice($.anchor, /\w+/, $.string)),
 		sequence_diagram: ($) =>
 			seq(
+				optional($.anchor),
 				alias($.participant_name, $.left),
 				$.connector,
 				alias($.participant_name, $.right),
