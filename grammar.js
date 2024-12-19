@@ -85,7 +85,7 @@ module.exports = grammar({
     comment: $ =>
       choice(
         seq("'", /[^\r\n]*\r?\n/),
-        seq("/'", repeat(/[^'],"'"/), prec(1, token("'/"))),
+        seq("/'", /[^']*\'+([^/'][^']*\'+)*/, '/'),
       ),
     group_block: $ =>
       seq('group', alias(/\S+/, $.label), repeat($.expression), 'end'),

@@ -209,3 +209,65 @@ Bob->L: Log transaction
         (to_right)
         (right)
         (activity)))))
+
+===========
+comment
+===========
+
+@startuml
+actor Bob #red
+' The only difference between actor
+'and participant is the drawing
+participant Alice
+participant "I have a really\nlong name" as L #99FF99
+/' You can also declare:
+   participant L as "I have a really\nlong name"  #99FF99
+  '/
+
+Alice->Bob: Authentication Request
+Bob->Alice: Authentication Response
+Bob->L: Log transaction
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (attribute
+        (kind)
+        (name)
+        (color)))
+    (comment)
+    (comment)
+    (expression
+      (attribute
+        (kind)
+        (name)))
+    (expression
+      (attribute
+        (kind)
+        (name
+          (string))
+        (attr_alias
+          (new_name))
+        (color)))
+    (comment)
+    (expression
+      (sequence_diagram
+        (left)
+        (to_right)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (to_right)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (to_right)
+        (right)
+        (activity)))))

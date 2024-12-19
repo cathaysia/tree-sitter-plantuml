@@ -958,22 +958,12 @@
               "value": "/'"
             },
             {
-              "type": "REPEAT",
-              "content": {
-                "type": "PATTERN",
-                "value": "[^'],\"'\""
-              }
+              "type": "PATTERN",
+              "value": "[^']*\\'+([^/'][^']*\\'+)*"
             },
             {
-              "type": "PREC",
-              "value": 1,
-              "content": {
-                "type": "TOKEN",
-                "content": {
-                  "type": "STRING",
-                  "value": "'/"
-                }
-              }
+              "type": "STRING",
+              "value": "/"
             }
           ]
         }
