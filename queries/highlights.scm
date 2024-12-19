@@ -50,8 +50,6 @@
   "loop"
 ] @label
 
-(times) @number
-
 (label) @label
 
 (escape_char) @string.escape

@@ -1,838 +1,865 @@
 [
-  {
-    "type": "attr_alias",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "new_name",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "attr_order",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "value",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "attribute",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "attr_alias",
-          "named": true
-        },
-        {
-          "type": "attr_order",
-          "named": true
-        },
-        {
-          "type": "color",
-          "named": true
-        },
-        {
-          "type": "kind",
-          "named": true
-        },
-        {
-          "type": "multiline",
-          "named": true
-        },
-        {
-          "type": "name",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "boolean_literal",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "chen",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "chen_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "chen_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "chronology",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "chronology_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "chronology_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "comment",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "connector",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "color",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "diagram",
-    "named": true,
-    "root": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "chen",
-          "named": true
-        },
-        {
-          "type": "chronology",
-          "named": true
-        },
-        {
-          "type": "ditaa",
-          "named": true
-        },
-        {
-          "type": "ebnf",
-          "named": true
-        },
-        {
-          "type": "gantt",
-          "named": true
-        },
-        {
-          "type": "json",
-          "named": true
-        },
-        {
-          "type": "mindmap",
-          "named": true
-        },
-        {
-          "type": "regex",
-          "named": true
-        },
-        {
-          "type": "uml",
-          "named": true
-        },
-        {
-          "type": "wbs",
-          "named": true
-        },
-        {
-          "type": "yaml",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "ditaa",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "ditaa_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "ditaa_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "ebnf",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "ebnf_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "ebnf_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "escape_char",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "attribute",
-          "named": true
-        },
-        {
-          "type": "group_block",
-          "named": true
-        },
-        {
-          "type": "loop_block",
-          "named": true
-        },
-        {
-          "type": "sequence_diagram",
-          "named": true
-        },
-        {
-          "type": "skinparam",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "gantt",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "gantt_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "gantt_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "group_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "expression",
-          "named": true
-        },
-        {
-          "type": "label",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "json",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "json_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "json_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "left",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "loop_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "expression",
-          "named": true
-        },
-        {
-          "type": "times",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "mindmap",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "mindmap_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "mindmap_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "multiline",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "escape_char",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "name",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "regex",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "regex_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "regex_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "right",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "sequence_diagram",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "activity",
-          "named": true
-        },
-        {
-          "type": "attr_alias",
-          "named": true
-        },
-        {
-          "type": "connector",
-          "named": true
-        },
-        {
-          "type": "left",
-          "named": true
-        },
-        {
-          "type": "right",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "skinparam",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "align",
-          "named": true
-        },
-        {
-          "type": "boolean_literal",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "string",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "escape_char",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "uml",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "wbs",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "wbs_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "wbs_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "yaml",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "yaml_data",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "yaml_data",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "\"",
-    "named": false
-  },
-  {
-    "type": "#",
-    "named": false
-  },
-  {
-    "type": "'",
-    "named": false
-  },
-  {
-    "type": "-",
-    "named": false
-  },
-  {
-    "type": "--",
-    "named": false
-  },
-  {
-    "type": "/",
-    "named": false
-  },
-  {
-    "type": "/'",
-    "named": false
-  },
-  {
-    "type": "//",
-    "named": false
-  },
-  {
-    "type": ":",
-    "named": false
-  },
-  {
-    "type": "<",
-    "named": false
-  },
-  {
-    "type": "<<",
-    "named": false
-  },
-  {
-    "type": ">",
-    "named": false
-  },
-  {
-    "type": ">>",
-    "named": false
-  },
-  {
-    "type": "@",
-    "named": false
-  },
-  {
-    "type": "@endchen",
-    "named": false
-  },
-  {
-    "type": "@endchronology",
-    "named": false
-  },
-  {
-    "type": "@endditaa",
-    "named": false
-  },
-  {
-    "type": "@endebnf",
-    "named": false
-  },
-  {
-    "type": "@endgantt",
-    "named": false
-  },
-  {
-    "type": "@endjson",
-    "named": false
-  },
-  {
-    "type": "@endmindmap",
-    "named": false
-  },
-  {
-    "type": "@endregex",
-    "named": false
-  },
-  {
-    "type": "@enduml",
-    "named": false
-  },
-  {
-    "type": "@endwbs",
-    "named": false
-  },
-  {
-    "type": "@endyaml",
-    "named": false
-  },
-  {
-    "type": "@startchen",
-    "named": false
-  },
-  {
-    "type": "@startchronology",
-    "named": false
-  },
-  {
-    "type": "@startditaa",
-    "named": false
-  },
-  {
-    "type": "@startebnf",
-    "named": false
-  },
-  {
-    "type": "@startgantt",
-    "named": false
-  },
-  {
-    "type": "@startjson",
-    "named": false
-  },
-  {
-    "type": "@startmindmap",
-    "named": false
-  },
-  {
-    "type": "@startregex",
-    "named": false
-  },
-  {
-    "type": "@startuml",
-    "named": false
-  },
-  {
-    "type": "@startwbs",
-    "named": false
-  },
-  {
-    "type": "@startyaml",
-    "named": false
-  },
-  {
-    "type": "[",
-    "named": false
-  },
-  {
-    "type": "[#",
-    "named": false
-  },
-  {
-    "type": "\\",
-    "named": false
-  },
-  {
-    "type": "\\\"",
-    "named": false
-  },
-  {
-    "type": "\\\\",
-    "named": false
-  },
-  {
-    "type": "]",
-    "named": false
-  },
-  {
-    "type": "activity",
-    "named": true
-  },
-  {
-    "type": "align",
-    "named": true
-  },
-  {
-    "type": "as",
-    "named": false
-  },
-  {
-    "type": "autonumber",
-    "named": false
-  },
-  {
-    "type": "autonumber stop",
-    "named": false
-  },
-  {
-    "type": "color",
-    "named": true
-  },
-  {
-    "type": "end",
-    "named": false
-  },
-  {
-    "type": "false",
-    "named": false
-  },
-  {
-    "type": "group",
-    "named": false
-  },
-  {
-    "type": "inc",
-    "named": false
-  },
-  {
-    "type": "kind",
-    "named": true
-  },
-  {
-    "type": "label",
-    "named": true
-  },
-  {
-    "type": "loop",
-    "named": false
-  },
-  {
-    "type": "new_name",
-    "named": true
-  },
-  {
-    "type": "o",
-    "named": false
-  },
-  {
-    "type": "order",
-    "named": false
-  },
-  {
-    "type": "ox",
-    "named": false
-  },
-  {
-    "type": "responseMessageBelowArrow",
-    "named": false
-  },
-  {
-    "type": "resume",
-    "named": false
-  },
-  {
-    "type": "sequenceMessageAlign",
-    "named": false
-  },
-  {
-    "type": "skinparam",
-    "named": false
-  },
-  {
-    "type": "times",
-    "named": true
-  },
-  {
-    "type": "true",
-    "named": false
-  },
-  {
-    "type": "value",
-    "named": true
-  },
-  {
-    "type": "x",
-    "named": false
-  },
-  {
-    "type": "xo",
-    "named": false
-  }
+	{
+		"type": "alt_block",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "expression",
+					"named": true
+				},
+				{
+					"type": "label",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "attr_alias",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": true,
+			"types": [
+				{
+					"type": "new_name",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "attr_order",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": true,
+			"types": [
+				{
+					"type": "value",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "attribute",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": false,
+			"types": [
+				{
+					"type": "attr_alias",
+					"named": true
+				},
+				{
+					"type": "attr_order",
+					"named": true
+				},
+				{
+					"type": "color",
+					"named": true
+				},
+				{
+					"type": "kind",
+					"named": true
+				},
+				{
+					"type": "multiline",
+					"named": true
+				},
+				{
+					"type": "name",
+					"named": true
+				},
+				{
+					"type": "string",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "boolean_literal",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "chen",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "chen_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "chen_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "chronology",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "chronology_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "chronology_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "comment",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "connector",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "color",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "diagram",
+		"named": true,
+		"root": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": true,
+			"types": [
+				{
+					"type": "chen",
+					"named": true
+				},
+				{
+					"type": "chronology",
+					"named": true
+				},
+				{
+					"type": "ditaa",
+					"named": true
+				},
+				{
+					"type": "ebnf",
+					"named": true
+				},
+				{
+					"type": "gantt",
+					"named": true
+				},
+				{
+					"type": "json",
+					"named": true
+				},
+				{
+					"type": "mindmap",
+					"named": true
+				},
+				{
+					"type": "regex",
+					"named": true
+				},
+				{
+					"type": "uml",
+					"named": true
+				},
+				{
+					"type": "wbs",
+					"named": true
+				},
+				{
+					"type": "yaml",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "ditaa",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "ditaa_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "ditaa_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "ebnf",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "ebnf_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "ebnf_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "escape_char",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "expression",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": true,
+			"types": [
+				{
+					"type": "alt_block",
+					"named": true
+				},
+				{
+					"type": "attribute",
+					"named": true
+				},
+				{
+					"type": "group_block",
+					"named": true
+				},
+				{
+					"type": "loop_block",
+					"named": true
+				},
+				{
+					"type": "sequence_diagram",
+					"named": true
+				},
+				{
+					"type": "skinparam",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "gantt",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "gantt_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "gantt_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "group_block",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "expression",
+					"named": true
+				},
+				{
+					"type": "label",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "json",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "json_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "json_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "left",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "string",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "loop_block",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "expression",
+					"named": true
+				},
+				{
+					"type": "label",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "mindmap",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "mindmap_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "mindmap_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "multiline",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": false,
+			"types": [
+				{
+					"type": "escape_char",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "name",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "string",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "regex",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "regex_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "regex_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "right",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "string",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "sequence_diagram",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "activity",
+					"named": true
+				},
+				{
+					"type": "attr_alias",
+					"named": true
+				},
+				{
+					"type": "connector",
+					"named": true
+				},
+				{
+					"type": "left",
+					"named": true
+				},
+				{
+					"type": "right",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "skinparam",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": true,
+			"types": [
+				{
+					"type": "align",
+					"named": true
+				},
+				{
+					"type": "boolean_literal",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "string",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": false,
+			"types": [
+				{
+					"type": "escape_char",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "uml",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": false,
+			"types": [
+				{
+					"type": "expression",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "wbs",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "wbs_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "wbs_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "yaml",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": false,
+			"required": false,
+			"types": [
+				{
+					"type": "yaml_data",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "yaml_data",
+		"named": true,
+		"fields": {}
+	},
+	{
+		"type": "\"",
+		"named": false
+	},
+	{
+		"type": "#",
+		"named": false
+	},
+	{
+		"type": "'",
+		"named": false
+	},
+	{
+		"type": "-",
+		"named": false
+	},
+	{
+		"type": "--",
+		"named": false
+	},
+	{
+		"type": "/",
+		"named": false
+	},
+	{
+		"type": "/'",
+		"named": false
+	},
+	{
+		"type": "//",
+		"named": false
+	},
+	{
+		"type": ":",
+		"named": false
+	},
+	{
+		"type": "<",
+		"named": false
+	},
+	{
+		"type": "<<",
+		"named": false
+	},
+	{
+		"type": ">",
+		"named": false
+	},
+	{
+		"type": ">>",
+		"named": false
+	},
+	{
+		"type": "@",
+		"named": false
+	},
+	{
+		"type": "@endchen",
+		"named": false
+	},
+	{
+		"type": "@endchronology",
+		"named": false
+	},
+	{
+		"type": "@endditaa",
+		"named": false
+	},
+	{
+		"type": "@endebnf",
+		"named": false
+	},
+	{
+		"type": "@endgantt",
+		"named": false
+	},
+	{
+		"type": "@endjson",
+		"named": false
+	},
+	{
+		"type": "@endmindmap",
+		"named": false
+	},
+	{
+		"type": "@endregex",
+		"named": false
+	},
+	{
+		"type": "@enduml",
+		"named": false
+	},
+	{
+		"type": "@endwbs",
+		"named": false
+	},
+	{
+		"type": "@endyaml",
+		"named": false
+	},
+	{
+		"type": "@startchen",
+		"named": false
+	},
+	{
+		"type": "@startchronology",
+		"named": false
+	},
+	{
+		"type": "@startditaa",
+		"named": false
+	},
+	{
+		"type": "@startebnf",
+		"named": false
+	},
+	{
+		"type": "@startgantt",
+		"named": false
+	},
+	{
+		"type": "@startjson",
+		"named": false
+	},
+	{
+		"type": "@startmindmap",
+		"named": false
+	},
+	{
+		"type": "@startregex",
+		"named": false
+	},
+	{
+		"type": "@startuml",
+		"named": false
+	},
+	{
+		"type": "@startwbs",
+		"named": false
+	},
+	{
+		"type": "@startyaml",
+		"named": false
+	},
+	{
+		"type": "[",
+		"named": false
+	},
+	{
+		"type": "[#",
+		"named": false
+	},
+	{
+		"type": "\\",
+		"named": false
+	},
+	{
+		"type": "\\\"",
+		"named": false
+	},
+	{
+		"type": "\\\\",
+		"named": false
+	},
+	{
+		"type": "]",
+		"named": false
+	},
+	{
+		"type": "activity",
+		"named": true
+	},
+	{
+		"type": "align",
+		"named": true
+	},
+	{
+		"type": "alt",
+		"named": false
+	},
+	{
+		"type": "as",
+		"named": false
+	},
+	{
+		"type": "autonumber",
+		"named": false
+	},
+	{
+		"type": "autonumber stop",
+		"named": false
+	},
+	{
+		"type": "color",
+		"named": true
+	},
+	{
+		"type": "else",
+		"named": false
+	},
+	{
+		"type": "end",
+		"named": false
+	},
+	{
+		"type": "false",
+		"named": false
+	},
+	{
+		"type": "group",
+		"named": false
+	},
+	{
+		"type": "inc",
+		"named": false
+	},
+	{
+		"type": "kind",
+		"named": true
+	},
+	{
+		"type": "label",
+		"named": true
+	},
+	{
+		"type": "loop",
+		"named": false
+	},
+	{
+		"type": "new_name",
+		"named": true
+	},
+	{
+		"type": "o",
+		"named": false
+	},
+	{
+		"type": "order",
+		"named": false
+	},
+	{
+		"type": "ox",
+		"named": false
+	},
+	{
+		"type": "responseMessageBelowArrow",
+		"named": false
+	},
+	{
+		"type": "resume",
+		"named": false
+	},
+	{
+		"type": "sequenceMessageAlign",
+		"named": false
+	},
+	{
+		"type": "skinparam",
+		"named": false
+	},
+	{
+		"type": "true",
+		"named": false
+	},
+	{
+		"type": "value",
+		"named": true
+	},
+	{
+		"type": "x",
+		"named": false
+	},
+	{
+		"type": "xo",
+		"named": false
+	}
 ]
