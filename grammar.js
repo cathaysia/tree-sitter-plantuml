@@ -42,7 +42,11 @@ module.exports = grammar({
 				$.delay_block,
 			),
 		delay_title: ($) =>
-			seq("...", optional(seq(alias(/\S[^\r?\n\.]+/, $.content), "...")),$._NEWLINE),
+			seq(
+				"...",
+				optional(seq(alias(/\S[^\r?\n\.]+/, $.content), "...")),
+				$._NEWLINE,
+			),
 		delay_block: ($) =>
 			prec.left(seq($.delay_title, repeat($.expression), $.delay_title)),
 		ref_line: ($) =>
@@ -124,6 +128,7 @@ module.exports = grammar({
 			),
 		loop_block: ($) => seq("loop", $.label, repeat($.expression), "end"),
 		group_block: ($) => seq("group", $.label, repeat($.expression), "end"),
+		digit: ($) => /\d+/,
 		// https://plantuml.com/skinparam
 		skinparam: ($) =>
 			seq(
@@ -134,6 +139,7 @@ module.exports = grammar({
 						alias(choice("left", "right", "center"), $.align),
 					),
 					seq("responseMessageBelowArrow", $.boolean_literal),
+					seq("maxMessageSize", $.digit),
 				),
 			),
 		boolean_literal: ($) => choice("true", "false"),
