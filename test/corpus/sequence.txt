@@ -458,3 +458,31 @@ Bob <->o Alice
         (left)
         (connector)
         (right)))))
+
+==========
+color
+==========
+
+@startuml
+Bob -[#red]> Alice : hello
+Alice -[#0000FF]->Bob : ok
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector
+          (color))
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector
+          (color))
+        (right)
+        (activity)))))

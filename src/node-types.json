@@ -119,6 +119,21 @@
     "fields": {}
   },
   {
+    "type": "connector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "color",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "diagram",
     "named": true,
     "root": true,
@@ -561,6 +576,14 @@
     "named": false
   },
   {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "--",
+    "named": false
+  },
+  {
     "type": "/",
     "named": false
   },
@@ -569,7 +592,27 @@
     "named": false
   },
   {
+    "type": "//",
+    "named": false
+  },
+  {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<<",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">>",
     "named": false
   },
   {
@@ -669,11 +712,19 @@
     "named": false
   },
   {
+    "type": "[#",
+    "named": false
+  },
+  {
     "type": "\\",
     "named": false
   },
   {
     "type": "\\\"",
+    "named": false
+  },
+  {
+    "type": "\\\\",
     "named": false
   },
   {
@@ -702,10 +753,6 @@
   },
   {
     "type": "color",
-    "named": true
-  },
-  {
-    "type": "connector",
     "named": true
   },
   {
@@ -741,7 +788,15 @@
     "named": true
   },
   {
+    "type": "o",
+    "named": false
+  },
+  {
     "type": "order",
+    "named": false
+  },
+  {
+    "type": "ox",
     "named": false
   },
   {
@@ -771,5 +826,13 @@
   {
     "type": "value",
     "named": true
+  },
+  {
+    "type": "x",
+    "named": false
+  },
+  {
+    "type": "xo",
+    "named": false
   }
 ]

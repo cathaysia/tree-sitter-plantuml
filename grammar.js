@@ -84,11 +84,12 @@ module.exports = grammar({
     sequence_diagram: $ =>
       seq(
         alias($.participant_name, $.left),
-        alias(choice(...generate_connectors()), $.connector),
+        $.connector,
         alias($.participant_name, $.right),
         optional($.attr_alias),
         optional(seq(':', alias(/[^\r?\n]+/, $.activity))),
       ),
+    connector: $ => choice(...generate_connectors($)),
 
     json: $ => create_non_uml($, 'json'),
     yaml: $ => create_non_uml($, 'yaml'),
@@ -429,50 +430,54 @@ function create_non_uml($, ty) {
   );
 }
 
-function generate_connectors() {
+function generate_connectors($) {
   const res = [];
+  const color = seq('[#', $.color, ']');
   // to_right
   {
-    const c = ['-', '--'];
-    const arr = ['>', '>>', '\\', '\\\\', '/', '//'];
+    const lines = ['-', '--', seq('-', color), seq('-', color, '-')];
+    const arrows = ['>', '>>', '\\', '\\\\', '/', '//'];
     const append = ['', 'o', 'x', 'ox'];
 
-    for (const i of c) {
-      for (const j of arr) {
-        for (const k of append) {
-          res.push(`${i}${j}${k}`);
+    for (const line of lines) {
+      for (const a of arrows) {
+        for (const x of append) {
+          const arr = [line, a, x].filter(x => x !== '');
+          res.push(seq(...arr));
         }
       }
     }
   }
   // to left
   {
-    const c = ['-', '--'];
-    const arr = ['<', '<<', '/', '//', '\\', '\\\\'];
+    const lines = ['-', '--', seq('-', color), seq('-', color, '-')];
+    const arrows = ['<', '<<', '/', '//', '\\', '\\\\'];
     const append = ['', 'o', 'x', 'xo'];
 
-    for (const i of c) {
-      for (const j of arr) {
-        for (const k of append) {
-          res.push(`${k}${j}${i}`);
+    for (const line of lines) {
+      for (const a of arrows) {
+        for (const x of append) {
+          const arr = [x, a, line].filter(x => x !== '');
+          res.push(seq(...arr));
         }
       }
     }
   }
   // two ways
   {
-    const c = ['-', '--'];
-    const left = ['<', '<<', '/', '//', '\\', '\\\\'];
-    const right = ['>', '>>', '\\', '\\\\', '/', '//'];
-    const lappend = ['', 'o', 'x', 'xo'];
-    const rappend = ['', 'o', 'x', 'ox'];
+    const lines = ['-', '--', seq('-', color), seq('-', color, '-')];
+    const left_arrows = ['<', '<<', '/', '//', '\\', '\\\\'];
+    const right_arrows = ['>', '>>', '\\', '\\\\', '/', '//'];
+    const left_append = ['', 'o', 'x', 'xo'];
+    const right_append = ['', 'o', 'x', 'ox'];
 
-    for (const i of c) {
-      for (const la of left) {
-        for (const ra of right) {
-          for (const lx of lappend) {
-            for (const rx of rappend) {
-              res.push(`${la}${i}${ra}${rx}${lx}`);
+    for (const line of lines) {
+      for (const la of left_arrows) {
+        for (const ra of right_arrows) {
+          for (const lx of left_append) {
+            for (const rx of right_append) {
+              const arr = [lx, la, line, ra, rx].filter(x => x !== '');
+              res.push(seq(...arr));
             }
           }
         }
