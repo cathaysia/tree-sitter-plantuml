@@ -31,6 +31,7 @@ module.exports = grammar({
 				$.loop_block,
 				$.skinparam,
 				$.alt_block,
+				$.note_block,
 			),
 		label: ($) => /\S+/,
 		alt_block: ($) =>
@@ -40,6 +41,13 @@ module.exports = grammar({
 				repeat($.expression),
 				repeat(seq("else", $.label, repeat($.expression))),
 				"end",
+			),
+		line: ($) => seq(/[^\r\n]*/, /\r?\n/),
+		note_block: ($) =>
+			seq(
+				"note",
+				choice("left", "right"),
+				seq($.line, optional(seq(repeat1($.line), "end note"))),
 			),
 		loop_block: ($) => seq("loop", $.label, repeat($.expression), "end"),
 		custom_label: ($) => seq("[", alias(/[^\]]*/, $.content), "]"),

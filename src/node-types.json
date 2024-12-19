@@ -293,6 +293,10 @@
 					"named": true
 				},
 				{
+					"type": "note_block",
+					"named": true
+				},
+				{
 					"type": "sequence_diagram",
 					"named": true
 				},
@@ -382,6 +386,11 @@
 		}
 	},
 	{
+		"type": "line",
+		"named": true,
+		"fields": {}
+	},
+	{
 		"type": "loop_block",
 		"named": true,
 		"fields": {},
@@ -445,6 +454,21 @@
 			"types": [
 				{
 					"type": "string",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "note_block",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "line",
 					"named": true
 				}
 			]
@@ -814,6 +838,10 @@
 		"named": false
 	},
 	{
+		"type": "end note",
+		"named": false
+	},
+	{
 		"type": "false",
 		"named": false
 	},
@@ -834,12 +862,20 @@
 		"named": true
 	},
 	{
+		"type": "left",
+		"named": false
+	},
+	{
 		"type": "loop",
 		"named": false
 	},
 	{
 		"type": "new_name",
 		"named": true
+	},
+	{
+		"type": "note",
+		"named": false
 	},
 	{
 		"type": "o",
@@ -859,6 +895,10 @@
 	},
 	{
 		"type": "resume",
+		"named": false
+	},
+	{
+		"type": "right",
 		"named": false
 	},
 	{
