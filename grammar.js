@@ -37,6 +37,19 @@ module.exports = grammar({
 				$.block_rnote,
 				$.block_hnote,
 				$.separator,
+				$.ref_line,
+				$.ref_block,
+			),
+		ref_line: ($) =>
+			seq("ref", "over", commaSep1($.participant_name), ":", $.line),
+		ref_block: ($) =>
+			seq(
+				"ref",
+				"over",
+				commaSep1($.participant_name),
+				$._NEWLINE,
+				repeat($.line),
+				"end ref",
 			),
 		separator: ($) => seq("==", /[^=]+/, "==", $._NEWLINE),
 		label: ($) => seq(/\S[^\r?\n\[]*/, optional($.custom_label)),
