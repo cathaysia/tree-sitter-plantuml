@@ -465,8 +465,12 @@
 		"fields": {},
 		"children": {
 			"multiple": true,
-			"required": true,
+			"required": false,
 			"types": [
+				{
+					"type": "color",
+					"named": true
+				},
 				{
 					"type": "line",
 					"named": true
@@ -866,6 +870,10 @@
 		"named": false
 	},
 	{
+		"type": "left over",
+		"named": false
+	},
+	{
 		"type": "loop",
 		"named": false
 	},
@@ -886,6 +894,10 @@
 		"named": false
 	},
 	{
+		"type": "over",
+		"named": false
+	},
+	{
 		"type": "ox",
 		"named": false
 	},
@@ -899,6 +911,10 @@
 	},
 	{
 		"type": "right",
+		"named": false
+	},
+	{
+		"type": "right over",
 		"named": false
 	},
 	{

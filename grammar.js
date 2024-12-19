@@ -1,6 +1,6 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
-
+const { commaSep1 } = require("./common/common");
 module.exports = grammar({
 	name: "plantuml",
 
@@ -22,6 +22,7 @@ module.exports = grammar({
 				$.wbs,
 				$.chen,
 			),
+		_NEWLINE: ($) => /\r?\n/,
 		uml: ($) => seq("@startuml", repeat($.expression), "@enduml"),
 		expression: ($) =>
 			choice(
@@ -46,8 +47,11 @@ module.exports = grammar({
 		note_block: ($) =>
 			seq(
 				"note",
-				choice("left", "right"),
-				seq($.line, optional(seq(repeat1($.line), "end note"))),
+				seq(
+					choice("left", "right", "left over", "right over", "over"),
+					optional(seq("#", $.color)),
+					choice(seq(":", $.line), seq(repeat($.line), "end note")),
+				),
 			),
 		loop_block: ($) => seq("loop", $.label, repeat($.expression), "end"),
 		custom_label: ($) => seq("[", alias(/[^\]]*/, $.content), "]"),
