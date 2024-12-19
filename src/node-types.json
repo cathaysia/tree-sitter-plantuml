@@ -54,6 +54,10 @@
           "named": true
         },
         {
+          "type": "multiline",
+          "named": true
+        },
+        {
           "type": "name",
           "named": true
         },
@@ -351,6 +355,21 @@
     "fields": {}
   },
   {
+    "type": "multiline",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escape_char",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "name",
     "named": true,
     "fields": {},
@@ -626,11 +645,19 @@
     "named": false
   },
   {
+    "type": "[",
+    "named": false
+  },
+  {
     "type": "\\",
     "named": false
   },
   {
     "type": "\\\"",
+    "named": false
+  },
+  {
+    "type": "]",
     "named": false
   },
   {

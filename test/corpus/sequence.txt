@@ -187,7 +187,8 @@ Bob->L: Log transaction
       (attribute
         (kind)
         (name
-          (string))
+          (string
+            (escape_char)))
         (attr_alias
           (new_name))
         (color)))
@@ -248,7 +249,8 @@ Bob->L: Log transaction
       (attribute
         (kind)
         (name
-          (string))
+          (string
+            (escape_char)))
         (attr_alias
           (new_name))
         (color)))
@@ -271,3 +273,71 @@ Bob->L: Log transaction
         (to_right)
         (right)
         (activity)))))
+
+=======
+order
+=======
+
+@startuml
+participant Last order 30
+participant Middle order 20
+participant First order 10
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (attribute
+        (kind)
+        (name)
+        (attr_order
+          (value))))
+    (expression
+      (attribute
+        (kind)
+        (name)
+        (attr_order
+          (value))))
+    (expression
+      (attribute
+        (kind)
+        (name)
+        (attr_order
+          (value))))))
+
+===========
+multiline
+===========
+
+@startuml
+participant Participant [
+    =Title
+    ----
+    ""打算""
+]
+
+participant Bob
+
+Participant -> Bob
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (attribute
+        (kind)
+        (name)
+        (multiline)))
+    (expression
+      (attribute
+        (kind)
+        (name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (to_right)
+        (right)))))
