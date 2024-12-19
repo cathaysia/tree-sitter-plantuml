@@ -1,5 +1,24 @@
 [
 	{
+		"type": "activation",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "color",
+					"named": true
+				},
+				{
+					"type": "participant_name",
+					"named": true
+				}
+			]
+		}
+	},
+	{
 		"type": "alt_block",
 		"named": true,
 		"fields": {},
@@ -384,6 +403,10 @@
 			"multiple": false,
 			"required": true,
 			"types": [
+				{
+					"type": "activation",
+					"named": true
+				},
 				{
 					"type": "alt_block",
 					"named": true
@@ -1050,6 +1073,10 @@
 		"named": false
 	},
 	{
+		"type": "activate",
+		"named": false
+	},
+	{
 		"type": "activity",
 		"named": true
 	},
@@ -1080,6 +1107,14 @@
 	{
 		"type": "content",
 		"named": true
+	},
+	{
+		"type": "deactivate",
+		"named": false
+	},
+	{
+		"type": "destroy",
+		"named": false
 	},
 	{
 		"type": "else",

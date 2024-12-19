@@ -41,8 +41,15 @@ module.exports = grammar({
 				$.ref_block,
 				$.delay_block,
 				$.space,
+				$.activation,
 			),
 		space: ($) => choice(seq("|||", $._NEWLINE), seq("||", $.digit, "||")),
+		activation: ($) =>
+			seq(
+				choice("activate", "destroy", "deactivate"),
+				$.participant_name,
+				optional(seq("#", $.color)),
+			),
 		delay_title: ($) =>
 			seq(
 				"...",

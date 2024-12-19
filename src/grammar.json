@@ -145,6 +145,10 @@
 				{
 					"type": "SYMBOL",
 					"name": "space"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "activation"
 				}
 			]
 		},
@@ -178,6 +182,53 @@
 						{
 							"type": "STRING",
 							"value": "||"
+						}
+					]
+				}
+			]
+		},
+		"activation": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "activate"
+						},
+						{
+							"type": "STRING",
+							"value": "destroy"
+						},
+						{
+							"type": "STRING",
+							"value": "deactivate"
+						}
+					]
+				},
+				{
+					"type": "SYMBOL",
+					"name": "participant_name"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "SEQ",
+							"members": [
+								{
+									"type": "STRING",
+									"value": "#"
+								},
+								{
+									"type": "SYMBOL",
+									"name": "color"
+								}
+							]
+						},
+						{
+							"type": "BLANK"
 						}
 					]
 				}
