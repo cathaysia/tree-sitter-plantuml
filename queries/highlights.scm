@@ -50,7 +50,14 @@
   "loop"
 ] @label
 
-(label) @label
+[
+ (label)
+] @label
+
+(custom_label
+  "[" @punctuation.bracket
+  (content) @label
+  "]" @punctuation.bracket)
 
 (escape_char) @string.escape
 

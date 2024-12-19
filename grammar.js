@@ -31,20 +31,26 @@ module.exports = grammar({
 				$.loop_block,
 				$.skinparam,
 				$.alt_block,
-				$.group_block,
 			),
+		label: ($) => /\S+/,
 		alt_block: ($) =>
 			seq(
 				"alt",
-				alias(/[^\r\n]+/, $.label),
+				$.label,
 				repeat($.expression),
-				repeat(seq("else", alias(/[^\r\n]+/, $.label), repeat($.expression))),
+				repeat(seq("else", $.label, repeat($.expression))),
 				"end",
 			),
-		loop_block: ($) =>
-			seq("loop", alias(/[^\r\n]+/, $.label), repeat($.expression), "end"),
+		loop_block: ($) => seq("loop", $.label, repeat($.expression), "end"),
+		custom_label: ($) => seq("[", alias(/[^\]]*/, $.content), "]"),
 		group_block: ($) =>
-			seq("group", alias(/[^\r\n]+/, $.label), repeat($.expression), "end"),
+			seq(
+				"group",
+				$.label,
+				optional($.custom_label),
+				repeat($.expression),
+				"end",
+			),
 		// https://plantuml.com/skinparam
 		skinparam: ($) =>
 			seq(

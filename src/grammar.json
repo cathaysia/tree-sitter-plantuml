@@ -105,12 +105,12 @@
 				{
 					"type": "SYMBOL",
 					"name": "alt_block"
-				},
-				{
-					"type": "SYMBOL",
-					"name": "group_block"
 				}
 			]
+		},
+		"label": {
+			"type": "PATTERN",
+			"value": "\\S+"
 		},
 		"alt_block": {
 			"type": "SEQ",
@@ -120,13 +120,8 @@
 					"value": "alt"
 				},
 				{
-					"type": "ALIAS",
-					"content": {
-						"type": "PATTERN",
-						"value": "[^\\r\\n]+"
-					},
-					"named": true,
-					"value": "label"
+					"type": "SYMBOL",
+					"name": "label"
 				},
 				{
 					"type": "REPEAT",
@@ -145,13 +140,8 @@
 								"value": "else"
 							},
 							{
-								"type": "ALIAS",
-								"content": {
-									"type": "PATTERN",
-									"value": "[^\\r\\n]+"
-								},
-								"named": true,
-								"value": "label"
+								"type": "SYMBOL",
+								"name": "label"
 							},
 							{
 								"type": "REPEAT",
@@ -177,13 +167,8 @@
 					"value": "loop"
 				},
 				{
-					"type": "ALIAS",
-					"content": {
-						"type": "PATTERN",
-						"value": "[^\\r\\n]+"
-					},
-					"named": true,
-					"value": "label"
+					"type": "SYMBOL",
+					"name": "label"
 				},
 				{
 					"type": "REPEAT",
@@ -198,6 +183,28 @@
 				}
 			]
 		},
+		"custom_label": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "["
+				},
+				{
+					"type": "ALIAS",
+					"content": {
+						"type": "PATTERN",
+						"value": "[^\\]]*"
+					},
+					"named": true,
+					"value": "content"
+				},
+				{
+					"type": "STRING",
+					"value": "]"
+				}
+			]
+		},
 		"group_block": {
 			"type": "SEQ",
 			"members": [
@@ -206,13 +213,20 @@
 					"value": "group"
 				},
 				{
-					"type": "ALIAS",
-					"content": {
-						"type": "PATTERN",
-						"value": "[^\\r\\n]+"
-					},
-					"named": true,
-					"value": "label"
+					"type": "SYMBOL",
+					"name": "label"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "SYMBOL",
+							"name": "custom_label"
+						},
+						{
+							"type": "BLANK"
+						}
+					]
 				},
 				{
 					"type": "REPEAT",

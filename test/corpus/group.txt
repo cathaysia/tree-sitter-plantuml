@@ -84,3 +84,62 @@ end
             (connector)
             (right)
             (activity)))))))
+
+===============
+sub label
+===============
+
+@startuml
+Alice -> Bob: 认证请求
+Bob -> Alice: 认证失败
+group 我自己的标签 [我自己的标签2]
+    Alice -> Log : 开始记录攻击日志
+    loop 1000次
+        Alice -> Bob: DNS攻击
+    end
+    Alice -> Log : 结束记录攻击日志
+end
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (group_block
+        (label)
+        (custom_label
+          (content))
+        (expression
+          (sequence_diagram
+            (left)
+            (connector)
+            (right)
+            (activity)))
+        (expression
+          (loop_block
+            (label)
+            (expression
+              (sequence_diagram
+                (left)
+                (connector)
+                (right)
+                (activity)))))
+        (expression
+          (sequence_diagram
+            (left)
+            (connector)
+            (right)
+            (activity)))))))
