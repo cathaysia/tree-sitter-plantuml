@@ -5,6 +5,34 @@ skinparam
 @startuml
 skinparam stereotypePosition top
 skinparam stereotypePosition bottom
+hide footbox
+
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor User
+participant "First Class" as A
+participant "Second Class" as B
+participant "Last Class" as C
+
+User -> A: DoWork
+activate A
+
+A -> B: Create Request
+activate B
+
+B -> C: DoWork
+activate C
+C --> B: WorkDone
+destroy C
+
+B --> A: Request Created
+deactivate B
+
+A --> User: Done
+deactivate A
 
 @enduml
 
@@ -13,6 +41,104 @@ skinparam stereotypePosition bottom
 (diagram
   (uml
     (expression
-      (skinparam))
+      (skinparam
+        (skinparam_attr)))
     (expression
-      (skinparam))))
+      (skinparam
+        (skinparam_attr)))
+    (expression
+      (footnote))
+    (expression
+      (skinparam
+        (skinparam_attr
+          (digit))))
+    (expression
+      (skinparam
+        (skinparam_attr
+          (digit))))
+    (expression
+      (skinparam
+        (skinparam_attr
+          (digit))))
+    (expression
+      (skinparam
+        (skinparam_attr)))
+    (expression
+      (attribute
+        (kind)
+        (name)))
+    (expression
+      (attribute
+        (kind)
+        (name
+          (string))
+        (attr_alias
+          (new_name))))
+    (expression
+      (attribute
+        (kind)
+        (name
+          (string))
+        (attr_alias
+          (new_name))))
+    (expression
+      (attribute
+        (kind)
+        (name
+          (string))
+        (attr_alias
+          (new_name))))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))))

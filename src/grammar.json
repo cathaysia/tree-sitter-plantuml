@@ -173,6 +173,27 @@
 				{
 					"type": "SYMBOL",
 					"name": "box_block"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "footnote"
+				}
+			]
+		},
+		"footnote": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "hide"
+				},
+				{
+					"type": "STRING",
+					"value": "footbox"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "_NEWLINE"
 				}
 			]
 		},
@@ -1532,81 +1553,30 @@
 					"type": "CHOICE",
 					"members": [
 						{
+							"type": "SYMBOL",
+							"name": "skinparam_attr"
+						},
+						{
 							"type": "SEQ",
 							"members": [
 								{
 									"type": "STRING",
-									"value": "sequenceMessageAlign"
+									"value": "sequence"
 								},
 								{
-									"type": "ALIAS",
+									"type": "STRING",
+									"value": "{"
+								},
+								{
+									"type": "REPEAT",
 									"content": {
-										"type": "CHOICE",
-										"members": [
-											{
-												"type": "STRING",
-												"value": "left"
-											},
-											{
-												"type": "STRING",
-												"value": "right"
-											},
-											{
-												"type": "STRING",
-												"value": "center"
-											}
-										]
-									},
-									"named": true,
-									"value": "align"
-								}
-							]
-						},
-						{
-							"type": "SEQ",
-							"members": [
-								{
-									"type": "STRING",
-									"value": "responseMessageBelowArrow"
+										"type": "SYMBOL",
+										"name": "skinparam_attr"
+									}
 								},
 								{
-									"type": "SYMBOL",
-									"name": "boolean_literal"
-								}
-							]
-						},
-						{
-							"type": "SEQ",
-							"members": [
-								{
 									"type": "STRING",
-									"value": "maxMessageSize"
-								},
-								{
-									"type": "SYMBOL",
-									"name": "digit"
-								}
-							]
-						},
-						{
-							"type": "SEQ",
-							"members": [
-								{
-									"type": "STRING",
-									"value": "stereotypePosition"
-								},
-								{
-									"type": "CHOICE",
-									"members": [
-										{
-											"type": "STRING",
-											"value": "top"
-										},
-										{
-											"type": "STRING",
-											"value": "bottom"
-										}
-									]
+									"value": "}"
 								}
 							]
 						}
@@ -1617,6 +1587,379 @@
 					"name": "_NEWLINE"
 				}
 			]
+		},
+		"skinparam_attr": {
+			"type": "CHOICE",
+			"members": [
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "sequenceMessageAlign",
+							"flags": "i"
+						},
+						{
+							"type": "ALIAS",
+							"content": {
+								"type": "CHOICE",
+								"members": [
+									{
+										"type": "STRING",
+										"value": "left"
+									},
+									{
+										"type": "STRING",
+										"value": "right"
+									},
+									{
+										"type": "STRING",
+										"value": "center"
+									}
+								]
+							},
+							"named": true,
+							"value": "align"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "responseMessageBelowArrow",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "boolean_literal"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "maxMessageSize",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "digit"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "stereotypePosition",
+							"flags": "i"
+						},
+						{
+							"type": "CHOICE",
+							"members": [
+								{
+									"type": "STRING",
+									"value": "top"
+								},
+								{
+									"type": "STRING",
+									"value": "bottom"
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "sequenceArrowThickness",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "digit"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "roundcorner",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "digit"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "sequenceParticipant",
+							"flags": "i"
+						},
+						{
+							"type": "PATTERN",
+							"value": "underline",
+							"flags": "i"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "backgroundColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "handwritten",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "boolean_literal"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ArrowColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ActorBorderColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "LifeLineBorderColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "LifeLineBackgroundColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ParticipantBorderColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ParticipantBackgroundColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ParticipantFontName",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ParticipantFontSize",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "digit"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ParticipantFontColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ActorBackgroundColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ActorFontColor",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ActorFontSize",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "digit"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ActorFontName",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "font_name"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "ParticipantPadding",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "digit"
+						}
+					]
+				},
+				{
+					"type": "SEQ",
+					"members": [
+						{
+							"type": "PATTERN",
+							"value": "BoxPadding",
+							"flags": "i"
+						},
+						{
+							"type": "SYMBOL",
+							"name": "digit"
+						}
+					]
+				}
+			]
+		},
+		"font_name": {
+			"type": "PATTERN",
+			"value": "\\S+"
 		},
 		"boolean_literal": {
 			"type": "CHOICE",

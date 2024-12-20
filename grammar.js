@@ -48,7 +48,9 @@ module.exports = grammar({
 				$.title,
 				$.title_block,
 				$.box_block,
+				$.footnote,
 			),
+		footnote: ($) => seq("hide", "footbox", $._NEWLINE),
 		box_block: ($) =>
 			seq(
 				"box",
@@ -168,16 +170,43 @@ module.exports = grammar({
 			seq(
 				"skinparam",
 				choice(
-					seq(
-						"sequenceMessageAlign",
-						alias(choice("left", "right", "center"), $.align),
-					),
-					seq("responseMessageBelowArrow", $.boolean_literal),
-					seq("maxMessageSize", $.digit),
-					seq("stereotypePosition", choice("top", "bottom")),
+					$.skinparam_attr,
+					seq("sequence", "{", repeat($.skinparam_attr), "}"),
 				),
 				$._NEWLINE,
 			),
+		skinparam_attr: ($) =>
+			choice(
+				seq(
+					/sequenceMessageAlign/i,
+					alias(choice("left", "right", "center"), $.align),
+				),
+				seq(/responseMessageBelowArrow/i, $.boolean_literal),
+				seq(/maxMessageSize/i, $.digit),
+				seq(/stereotypePosition/i, choice("top", "bottom")),
+				seq(/sequenceArrowThickness/i, $.digit),
+				seq(/roundcorner/i, $.digit),
+				seq(/sequenceParticipant/i, /underline/i),
+				seq(/backgroundColor/i, $.color),
+				seq(/handwritten/i, $.boolean_literal),
+				seq(/ArrowColor/i, $.color),
+				seq(/ActorBorderColor/i, $.color),
+				seq(/LifeLineBorderColor/i, $.color),
+				seq(/LifeLineBackgroundColor/i, $.color),
+
+				seq(/ParticipantBorderColor/i, $.color),
+				seq(/ParticipantBackgroundColor/i, $.color),
+				seq(/ParticipantFontName/i, $.color),
+				seq(/ParticipantFontSize/i, $.digit),
+				seq(/ParticipantFontColor/i, $.color),
+				seq(/ActorBackgroundColor/i, $.color),
+				seq(/ActorFontColor/i, $.color),
+				seq(/ActorFontSize/i, $.digit),
+				seq(/ActorFontName/i, $.font_name),
+				seq(/ParticipantPadding/i, $.digit),
+				seq(/BoxPadding/i, $.digit),
+			),
+		font_name: ($) => /\S+/,
 		boolean_literal: ($) => choice("true", "false"),
 		attribute: ($) =>
 			prec.right(

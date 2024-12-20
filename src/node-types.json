@@ -491,6 +491,10 @@
 					"named": true
 				},
 				{
+					"type": "footnote",
+					"named": true
+				},
+				{
 					"type": "group_block",
 					"named": true
 				},
@@ -544,6 +548,11 @@
 				}
 			]
 		}
+	},
+	{
+		"type": "footnote",
+		"named": true,
+		"fields": {}
 	},
 	{
 		"type": "gantt",
@@ -931,6 +940,21 @@
 		"named": true,
 		"fields": {},
 		"children": {
+			"multiple": true,
+			"required": false,
+			"types": [
+				{
+					"type": "skinparam_attr",
+					"named": true
+				}
+			]
+		}
+	},
+	{
+		"type": "skinparam_attr",
+		"named": true,
+		"fields": {},
+		"children": {
 			"multiple": false,
 			"required": false,
 			"types": [
@@ -943,7 +967,15 @@
 					"named": true
 				},
 				{
+					"type": "color",
+					"named": true
+				},
+				{
 					"type": "digit",
+					"named": true
+				},
+				{
+					"type": "font_name",
 					"named": true
 				}
 			]
@@ -1404,7 +1436,19 @@
 		"named": false
 	},
 	{
+		"type": "font_name",
+		"named": true
+	},
+	{
+		"type": "footbox",
+		"named": false
+	},
+	{
 		"type": "group",
+		"named": false
+	},
+	{
+		"type": "hide",
 		"named": false
 	},
 	{
@@ -1425,10 +1469,6 @@
 	},
 	{
 		"type": "loop",
-		"named": false
-	},
-	{
-		"type": "maxMessageSize",
 		"named": false
 	},
 	{
@@ -1472,10 +1512,6 @@
 		"named": false
 	},
 	{
-		"type": "responseMessageBelowArrow",
-		"named": false
-	},
-	{
 		"type": "resume",
 		"named": false
 	},
@@ -1492,15 +1528,11 @@
 		"named": false
 	},
 	{
-		"type": "sequenceMessageAlign",
+		"type": "sequence",
 		"named": false
 	},
 	{
 		"type": "skinparam",
-		"named": false
-	},
-	{
-		"type": "stereotypePosition",
 		"named": false
 	},
 	{
