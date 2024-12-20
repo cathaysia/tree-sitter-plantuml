@@ -1744,6 +1744,18 @@
 									}
 								]
 							}
+						},
+						{
+							"type": "CHOICE",
+							"members": [
+								{
+									"type": "SYMBOL",
+									"name": "stereotypes"
+								},
+								{
+									"type": "BLANK"
+								}
+							]
 						}
 					]
 				}
@@ -1899,6 +1911,28 @@
 				}
 			]
 		},
+		"stereotypes": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "<<"
+				},
+				{
+					"type": "ALIAS",
+					"content": {
+						"type": "PATTERN",
+						"value": "[^>]*"
+					},
+					"named": true,
+					"value": "content"
+				},
+				{
+					"type": "STRING",
+					"value": ">>"
+				}
+			]
+		},
 		"sequence_diagram": {
 			"type": "SEQ",
 			"members": [
@@ -1935,6 +1969,18 @@
 					},
 					"named": true,
 					"value": "right"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "SYMBOL",
+							"name": "stereotypes"
+						},
+						{
+							"type": "BLANK"
+						}
+					]
 				},
 				{
 					"type": "CHOICE",

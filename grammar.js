@@ -192,6 +192,7 @@ module.exports = grammar({
 					alias($.participant_name, $.name),
 					optional($.multiline),
 					repeat(choice(seq("#", $.color), $.attr_order, $.attr_alias)),
+					optional($.stereotypes),
 				),
 			),
 		multiline: ($) => seq("[", repeat(choice(/[^\]]/, $.escape_char)), "]"),
@@ -201,12 +202,14 @@ module.exports = grammar({
 		escape_char: ($) => seq("\\", /./),
 		anchor: ($) => seq("{", /[^}]+/, "}"),
 		participant_name: ($) => seq(choice($.anchor, /\w+/, $.string)),
+		stereotypes: ($) => seq("<<", alias(/[^>]*/, $.content), ">>"),
 		sequence_diagram: ($) =>
 			seq(
 				optional($.anchor),
 				alias($.participant_name, $.left),
 				$.connector,
 				alias($.participant_name, $.right),
+				optional($.stereotypes),
 				optional($.attr_alias),
 				repeat(choice("++", "--", "**", "!!")),
 				optional(seq("#", $.color)),

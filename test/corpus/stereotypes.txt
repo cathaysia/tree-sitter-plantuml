@@ -1,0 +1,38 @@
+===============
+stereotypes
+===============
+
+@startuml
+
+participant "Famous Bob" as Bob << Generated >>
+participant Alice << (C,#ADD1B2) Testable >>
+
+Bob->Alice: First message
+
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (attribute
+        (kind)
+        (name
+          (string))
+        (attr_alias
+          (new_name))
+        (stereotypes
+          (content))))
+    (expression
+      (attribute
+        (kind)
+        (name)
+        (stereotypes
+          (content))))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))))
