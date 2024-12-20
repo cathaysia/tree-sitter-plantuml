@@ -3,8 +3,21 @@ incoming
 ============
 
 @startuml
-a ->]: Hello
+[-> A: DoWork
+
+activate A
+
+A -> A: Internal call
+activate A
+
+A ->] : << createRequest >>
+
+A<--] : RequestCreated
+deactivate A
+[<- A: Done
+deactivate A
 @enduml
+
 
 ---
 
@@ -12,7 +25,41 @@ a ->]: Hello
   (uml
     (expression
       (sequence_diagram
+        (iconnector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))
+    (expression
+      (sequence_diagram
         (left)
         (connector)
         (outgoing)
-        (activity)))))
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (outgoing)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))
+    (expression
+      (sequence_diagram
+        (iconnector)
+        (right)
+        (activity)))
+    (expression
+      (activation
+        (participant_name)))))

@@ -82,7 +82,7 @@ module.exports = grammar({
 				"end ref",
 			),
 		separator: ($) => seq("==", /[^=]+/, "==", $._NEWLINE),
-		label: ($) => seq(/\S[^\r?\n\[]*/, optional($.custom_label)),
+		label: ($) => seq(/\S[^\r?\n\[]*/, optional($.custom_label), $._NEWLINE),
 		custom_label: ($) => seq("[", alias(/[^\]]*/, $.content), "]"),
 		alt_block: ($) =>
 			seq(
@@ -170,36 +170,38 @@ module.exports = grammar({
 			),
 		boolean_literal: ($) => choice("true", "false"),
 		attribute: ($) =>
-			choice(
-				seq("autoactivate", choice("on", "off")),
-				prec.left(
-					seq(
-						"autonumber",
-						choice("inc", "resume"),
-						choice(/\d+\.\d+\.\d/, optional($.string)),
-						/\w/,
-					),
-				),
-				seq("autonumber", repeat(/\d+/), optional($.string), /\r?\n/),
-				"autonumber stop",
-				seq(
-					alias(
-						choice(
-							"participant",
-							"actor",
-							"boundary",
-							"control",
-							"entity",
-							"database",
-							"collections",
-							"queue",
+			prec.right(
+				choice(
+					seq("autoactivate", choice("on", "off")),
+					prec.left(
+						seq(
+							"autonumber",
+							choice("inc", "resume"),
+							choice(/\d+\.\d+\.\d/, optional($.string)),
+							/\w/,
 						),
-						$.kind,
 					),
-					alias($.participant_name, $.name),
-					optional($.multiline),
-					repeat(choice($.color, $.attr_order, $.attr_alias)),
-					optional($.stereotypes),
+					seq("autonumber", repeat(/\d+/), optional($.string), /\r?\n/),
+					"autonumber stop",
+					seq(
+						alias(
+							choice(
+								"participant",
+								"actor",
+								"boundary",
+								"control",
+								"entity",
+								"database",
+								"collections",
+								"queue",
+							),
+							$.kind,
+						),
+						alias($.participant_name, $.name),
+						optional($.multiline),
+						repeat(choice($.color, $.attr_order, $.attr_alias)),
+						optional($.stereotypes),
+					),
 				),
 			),
 		multiline: ($) => seq("[", repeat(choice(/[^\]]/, $.escape_char)), "]"),
@@ -213,8 +215,10 @@ module.exports = grammar({
 		sequence_diagram: ($) =>
 			seq(
 				optional($.anchor),
-				alias($.participant_name, $.left),
-				$.connector,
+				choice(
+					seq(alias($.participant_name, $.left), $.connector),
+					$.iconnector,
+				),
 				choice(
 					alias($.participant_name, $.right),
 					alias(token.immediate("]"), $.outgoing),
@@ -226,6 +230,7 @@ module.exports = grammar({
 				optional(seq(":", alias(/[^\r?\n]+/, $.activity))),
 			),
 		connector: ($) => choice(...generate_connectors($)),
+		iconnector: ($) => choice(...generate_incoming_connectors($)),
 
 		json: ($) => create_non_uml($, "json"),
 		yaml: ($) => create_non_uml($, "yaml"),
@@ -605,6 +610,63 @@ function generate_connectors($) {
 					for (const rx of append) {
 						const arr = [lx, la, line, ra, rx].filter((x) => x !== "");
 						res.push(seq(...arr));
+					}
+				}
+			}
+		}
+	}
+
+	return res;
+}
+
+function generate_incoming_connectors($) {
+	const res = [];
+	const color = seq("[", $.color, "]");
+	const lines = ["-", "--", seq("-", color), seq("-", color, "-")];
+	const left_arrows = ["<", "<<", "/", "//", "\\", "\\\\"];
+	const right_arrows = [">", ">>", "\\", "\\\\", "/", "//"];
+	const append = ["", "o", "x"];
+	// to_right
+
+	{
+		const lines = ["[-", "[--", seq("[-", color), seq("[-", color, "-")];
+		for (const line of lines) {
+			for (const a of right_arrows) {
+				for (const x of append) {
+					const arr = [line, a, x].filter((x) => x !== "");
+					const marr = arr.map((v, i) => (i === 0 ? v : token.immediate(v)));
+					res.push(seq(...marr));
+				}
+			}
+		}
+	}
+
+	// to left
+	{
+		const append = ["[", "[o", "[x"];
+		for (const line of lines) {
+			for (const a of left_arrows) {
+				for (const x of append) {
+					const arr = [x, token.immediate(a), line];
+					res.push(seq(...arr));
+				}
+			}
+		}
+	}
+
+	// two ways
+	{
+		const lappend = ["[", "[o", "[x"];
+		for (const line of lines) {
+			for (const la of left_arrows) {
+				for (const ra of right_arrows) {
+					for (const lx of lappend) {
+						for (const rx of append) {
+							const arr = [lx, token.immediate(la), line, ra, rx].filter(
+								(x) => x !== "",
+							);
+							res.push(seq(...arr));
+						}
 					}
 				}
 			}
