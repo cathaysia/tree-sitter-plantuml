@@ -190,6 +190,29 @@
 		"fields": {}
 	},
 	{
+		"type": "box_block",
+		"named": true,
+		"fields": {},
+		"children": {
+			"multiple": true,
+			"required": true,
+			"types": [
+				{
+					"type": "color",
+					"named": true
+				},
+				{
+					"type": "expression",
+					"named": true
+				},
+				{
+					"type": "title",
+					"named": true
+				}
+			]
+		}
+	},
+	{
 		"type": "chen",
 		"named": true,
 		"fields": {},
@@ -453,6 +476,10 @@
 				},
 				{
 					"type": "block_rnote",
+					"named": true
+				},
+				{
+					"type": "box_block",
 					"named": true
 				},
 				{
@@ -973,7 +1000,7 @@
 		"fields": {},
 		"children": {
 			"multiple": false,
-			"required": true,
+			"required": false,
 			"types": [
 				{
 					"type": "line",
@@ -1297,6 +1324,10 @@
 		"named": false
 	},
 	{
+		"type": "box",
+		"named": false
+	},
+	{
 		"type": "color",
 		"named": true
 	},
@@ -1325,6 +1356,10 @@
 		"named": false
 	},
 	{
+		"type": "end box",
+		"named": false
+	},
+	{
 		"type": "end hnote",
 		"named": false
 	},
@@ -1342,6 +1377,10 @@
 	},
 	{
 		"type": "end title",
+		"named": false
+	},
+	{
+		"type": "endbox",
 		"named": false
 	},
 	{

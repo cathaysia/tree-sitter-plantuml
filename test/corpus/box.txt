@@ -1,0 +1,49 @@
+======
+box
+======
+
+@startuml
+
+box "Internal Service" #LightBlue
+participant Bob
+participant Alice
+end box
+participant Other
+
+Bob -> Alice : hello
+Alice -> Other : hello
+
+@enduml
+
+---
+
+(diagram
+  (uml
+    (expression
+      (box_block
+        (title)
+        (color)
+        (expression
+          (attribute
+            (kind)
+            (name)))
+        (expression
+          (attribute
+            (kind)
+            (name)))))
+    (expression
+      (attribute
+        (kind)
+        (name)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (right)
+        (activity)))))

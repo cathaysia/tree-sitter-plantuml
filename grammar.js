@@ -47,6 +47,16 @@ module.exports = grammar({
 				$.pragma,
 				$.title,
 				$.title_block,
+				$.box_block,
+			),
+		box_block: ($) =>
+			seq(
+				"box",
+				alias(/\S[^#]+/, $.title),
+				optional($.color),
+				$._NEWLINE,
+				repeat($.expression),
+				choice("endbox", "end box"),
 			),
 		title: ($) => seq("title", $.line),
 		title_block: ($) =>

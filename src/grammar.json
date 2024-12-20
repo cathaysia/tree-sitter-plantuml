@@ -169,6 +169,64 @@
 				{
 					"type": "SYMBOL",
 					"name": "title_block"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "box_block"
+				}
+			]
+		},
+		"box_block": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "box"
+				},
+				{
+					"type": "ALIAS",
+					"content": {
+						"type": "PATTERN",
+						"value": "\\S[^#]+"
+					},
+					"named": true,
+					"value": "title"
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "SYMBOL",
+							"name": "color"
+						},
+						{
+							"type": "BLANK"
+						}
+					]
+				},
+				{
+					"type": "SYMBOL",
+					"name": "_NEWLINE"
+				},
+				{
+					"type": "REPEAT",
+					"content": {
+						"type": "SYMBOL",
+						"name": "expression"
+					}
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "endbox"
+						},
+						{
+							"type": "STRING",
+							"value": "end box"
+						}
+					]
 				}
 			]
 		},
