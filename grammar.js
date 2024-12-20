@@ -578,7 +578,8 @@ function generate_connectors($) {
 			for (const a of arrows) {
 				for (const x of append) {
 					const arr = [line, a, x].filter((x) => x !== "");
-					res.push(seq(...arr));
+					const marr = arr.map((v, i) => (i === 0 ? v : token.immediate(v)));
+					res.push(seq(...marr));
 				}
 			}
 		}
@@ -592,7 +593,10 @@ function generate_connectors($) {
 			for (const a of arrows) {
 				for (const x of append) {
 					const arr = [x, a, line].filter((x) => x !== "");
-					res.push(seq(...arr));
+					const marr = arr.map((v, i) =>
+						i === arr.length - 1 || i === 0 ? v : token.immediate(v),
+					);
+					res.push(seq(...marr));
 				}
 			}
 		}
