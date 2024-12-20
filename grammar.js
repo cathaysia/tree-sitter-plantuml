@@ -215,7 +215,10 @@ module.exports = grammar({
 				optional($.anchor),
 				alias($.participant_name, $.left),
 				$.connector,
-				alias($.participant_name, $.right),
+				choice(
+					alias($.participant_name, $.right),
+					alias(token.immediate("]"), $.outgoing),
+				),
 				optional($.stereotypes),
 				optional($.attr_alias),
 				repeat(choice("++", "--", "**", "!!")),

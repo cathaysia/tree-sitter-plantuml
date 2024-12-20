@@ -54,6 +54,8 @@
  (label)
 ] @label
 
+(outgoing) @punctuation.special
+
 (custom_label
   "[" @punctuation.bracket
   (content) @label

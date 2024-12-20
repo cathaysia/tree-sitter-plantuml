@@ -866,6 +866,10 @@
 					"named": true
 				},
 				{
+					"type": "outgoing",
+					"named": true
+				},
+				{
 					"type": "right",
 					"named": true
 				},
@@ -1388,6 +1392,10 @@
 	{
 		"type": "order",
 		"named": false
+	},
+	{
+		"type": "outgoing",
+		"named": true
 	},
 	{
 		"type": "over",

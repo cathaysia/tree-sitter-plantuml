@@ -2038,13 +2038,30 @@
 					"name": "connector"
 				},
 				{
-					"type": "ALIAS",
-					"content": {
-						"type": "SYMBOL",
-						"name": "participant_name"
-					},
-					"named": true,
-					"value": "right"
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "ALIAS",
+							"content": {
+								"type": "SYMBOL",
+								"name": "participant_name"
+							},
+							"named": true,
+							"value": "right"
+						},
+						{
+							"type": "ALIAS",
+							"content": {
+								"type": "IMMEDIATE_TOKEN",
+								"content": {
+									"type": "STRING",
+									"value": "]"
+								}
+							},
+							"named": true,
+							"value": "outgoing"
+						}
+					]
 				},
 				{
 					"type": "CHOICE",

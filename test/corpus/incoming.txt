@@ -1,0 +1,18 @@
+============
+incoming
+============
+
+@startuml
+a ->]: Hello
+@enduml
+
+---
+
+(diagram
+  (uml
+    (expression
+      (sequence_diagram
+        (left)
+        (connector)
+        (outgoing)
+        (activity)))))
