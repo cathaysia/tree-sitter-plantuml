@@ -159,7 +159,9 @@ module.exports = grammar({
 					),
 					seq("responseMessageBelowArrow", $.boolean_literal),
 					seq("maxMessageSize", $.digit),
+					seq("stereotypePosition", choice("top", "bottom")),
 				),
+				$._NEWLINE,
 			),
 		boolean_literal: ($) => choice("true", "false"),
 		attribute: ($) =>

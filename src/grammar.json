@@ -1520,8 +1520,34 @@
 									"name": "digit"
 								}
 							]
+						},
+						{
+							"type": "SEQ",
+							"members": [
+								{
+									"type": "STRING",
+									"value": "stereotypePosition"
+								},
+								{
+									"type": "CHOICE",
+									"members": [
+										{
+											"type": "STRING",
+											"value": "top"
+										},
+										{
+											"type": "STRING",
+											"value": "bottom"
+										}
+									]
+								}
+							]
 						}
 					]
+				},
+				{
+					"type": "SYMBOL",
+					"name": "_NEWLINE"
 				}
 			]
 		},

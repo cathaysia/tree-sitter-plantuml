@@ -1,0 +1,18 @@
+===========
+skinparam
+===========
+
+@startuml
+skinparam stereotypePosition top
+skinparam stereotypePosition bottom
+
+@enduml
+
+---
+
+(diagram
+  (uml
+    (expression
+      (skinparam))
+    (expression
+      (skinparam))))
