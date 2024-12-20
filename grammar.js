@@ -569,53 +569,42 @@ function generate_connectors($) {
 	const res = [];
 	const color = seq("[", $.color, "]");
 	const lines = ["-", "--", seq("-", color), seq("-", color, "-")];
+	const left_arrows = ["<", "<<", "/", "//", "\\", "\\\\"];
+	const right_arrows = [">", ">>", "\\", "\\\\", "/", "//"];
+	const append = ["", "o", "x"];
 	// to_right
-	{
-		const arrows = [">", ">>", "\\", "\\\\", "/", "//"];
-		const append = ["", "o", "x"];
-
-		for (const line of lines) {
-			for (const a of arrows) {
-				for (const x of append) {
-					const arr = [line, a, x].filter((x) => x !== "");
-					const marr = arr.map((v, i) => (i === 0 ? v : token.immediate(v)));
-					res.push(seq(...marr));
-				}
+	for (const line of lines) {
+		for (const a of right_arrows) {
+			for (const x of append) {
+				const arr = [line, a, x].filter((x) => x !== "");
+				const marr = arr.map((v, i) => (i === 0 ? v : token.immediate(v)));
+				res.push(seq(...marr));
 			}
 		}
 	}
+
 	// to left
-	{
-		const arrows = ["<", "<<", "/", "//", "\\", "\\\\"];
-		const append = ["", "o", "x"];
 
-		for (const line of lines) {
-			for (const a of arrows) {
-				for (const x of append) {
-					const arr = [x, a, line].filter((x) => x !== "");
-					const marr = arr.map((v, i) =>
-						i === arr.length - 1 || i === 0 ? v : token.immediate(v),
-					);
-					res.push(seq(...marr));
-				}
+	for (const line of lines) {
+		for (const a of left_arrows) {
+			for (const x of append) {
+				const arr = [x, a, line].filter((x) => x !== "");
+				const marr = arr.map((v, i) =>
+					i === arr.length - 1 || i === 0 ? v : token.immediate(v),
+				);
+				res.push(seq(...marr));
 			}
 		}
 	}
-	// two ways
-	{
-		const left_arrows = ["<", "<<", "/", "//", "\\", "\\\\"];
-		const right_arrows = [">", ">>", "\\", "\\\\", "/", "//"];
-		const left_append = ["", "o", "x"];
-		const right_append = ["", "o", "x"];
 
-		for (const line of lines) {
-			for (const la of left_arrows) {
-				for (const ra of right_arrows) {
-					for (const lx of left_append) {
-						for (const rx of right_append) {
-							const arr = [lx, la, line, ra, rx].filter((x) => x !== "");
-							res.push(seq(...arr));
-						}
+	// two ways
+	for (const line of lines) {
+		for (const la of left_arrows) {
+			for (const ra of right_arrows) {
+				for (const lx of append) {
+					for (const rx of append) {
+						const arr = [lx, la, line, ra, rx].filter((x) => x !== "");
+						res.push(seq(...arr));
 					}
 				}
 			}
