@@ -572,7 +572,7 @@ function generate_connectors($) {
 	// to_right
 	{
 		const arrows = [">", ">>", "\\", "\\\\", "/", "//"];
-		const append = ["", "o", "x", "ox"];
+		const append = ["", "o", "x"];
 
 		for (const line of lines) {
 			for (const a of arrows) {
@@ -587,7 +587,7 @@ function generate_connectors($) {
 	// to left
 	{
 		const arrows = ["<", "<<", "/", "//", "\\", "\\\\"];
-		const append = ["", "o", "x", "xo"];
+		const append = ["", "o", "x"];
 
 		for (const line of lines) {
 			for (const a of arrows) {
@@ -605,8 +605,8 @@ function generate_connectors($) {
 	{
 		const left_arrows = ["<", "<<", "/", "//", "\\", "\\\\"];
 		const right_arrows = [">", ">>", "\\", "\\\\", "/", "//"];
-		const left_append = ["", "o", "x", "xo"];
-		const right_append = ["", "o", "x", "ox"];
+		const left_append = ["", "o", "x"];
+		const right_append = ["", "o", "x"];
 
 		for (const line of lines) {
 			for (const la of left_arrows) {
