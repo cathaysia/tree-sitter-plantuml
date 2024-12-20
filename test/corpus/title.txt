@@ -1,0 +1,27 @@
+===========
+title
+===========
+
+@startuml
+title __Simple__ **communication** example
+
+title
+ <u>Simple</u> communication example
+ on <i>several</i> lines and using <font color=red>html</font>
+ This is hosted by <img:sourceforge.jpg>
+end title
+
+@enduml
+
+----
+
+(diagram
+  (uml
+    (expression
+      (title
+        (line)))
+    (expression
+      (title_block
+        (line)
+        (line)
+        (line)))))

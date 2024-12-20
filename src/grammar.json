@@ -161,6 +161,56 @@
 				{
 					"type": "SYMBOL",
 					"name": "pragma"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "title"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "title_block"
+				}
+			]
+		},
+		"title": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "STRING",
+					"value": "title"
+				},
+				{
+					"type": "SYMBOL",
+					"name": "line"
+				}
+			]
+		},
+		"title_block": {
+			"type": "SEQ",
+			"members": [
+				{
+					"type": "PATTERN",
+					"value": "title\\s*\\r?\\n"
+				},
+				{
+					"type": "REPEAT",
+					"content": {
+						"type": "SYMBOL",
+						"name": "line"
+					}
+				},
+				{
+					"type": "CHOICE",
+					"members": [
+						{
+							"type": "STRING",
+							"value": "endtitle"
+						},
+						{
+							"type": "STRING",
+							"value": "end title"
+						}
+					]
 				}
 			]
 		},

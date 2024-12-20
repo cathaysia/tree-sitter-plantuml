@@ -45,7 +45,12 @@ module.exports = grammar({
 				$.return,
 				$.create,
 				$.pragma,
+				$.title,
+				$.title_block,
 			),
+		title: ($) => seq("title", $.line),
+		title_block: ($) =>
+			seq(/title\s*\r?\n/, repeat($.line), choice("endtitle", "end title")),
 		pragma: ($) => seq("!pragma", "teoz", choice("true", "false")),
 		create: ($) =>
 			seq("create", $.participant_name, choice($._NEWLINE, $.line)),
