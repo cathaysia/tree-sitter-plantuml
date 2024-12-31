@@ -1,8 +1,8 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
-const { commaSep1 } = require("./common/common");
+const { commaSep1 } = require("../common/common");
 module.exports = grammar({
-	name: "plantuml",
+	name: "plantuml_sequence",
 
 	extras: ($) => [/\s/, $.comment],
 	rules: {
