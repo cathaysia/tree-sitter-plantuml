@@ -7,7 +7,7 @@
  *
  */
 function commaSep1(rule) {
-	return seq(rule, repeat(seq(",", rule)));
+  return seq(rule, repeat(seq(',', rule)));
 }
 
 /**
@@ -19,7 +19,7 @@ function commaSep1(rule) {
  *
  */
 function commaSep(rule) {
-	return optional(commaSep1(rule));
+  return optional(commaSep1(rule));
 }
 
 /**
@@ -28,7 +28,7 @@ function commaSep(rule) {
  * @return {SeqRule}
  */
 function anySep1(rule, sep) {
-	return seq(rule, repeat(seq(sep, rule)));
+  return seq(rule, repeat(seq(sep, rule)));
 }
 
 /**
@@ -37,32 +37,32 @@ function anySep1(rule, sep) {
  * @return {ChoiceRule}
  */
 function anySep(rule, sep) {
-	return optional(anySep1(rule, sep));
+  return optional(anySep1(rule, sep));
 }
 
 function escaped_ch(ch, exclude_newline, ...args) {
-	let escaped = ch;
-	const mapped = ch.split("").map((v) => {
-		if (v === "]") {
-			return "\\]";
-		}
-		if (v === "[") {
-			return "\\[";
-		}
-		return `\\${v}`;
-	});
+  let escaped = ch;
+  const mapped = ch.split('').map(v => {
+    if (v === ']') {
+      return '\\]';
+    }
+    if (v === '[') {
+      return '\\[';
+    }
+    return `\\${v}`;
+  });
 
-	if (ch === "]") {
-		escaped = "\\]";
-	}
-	if (ch === "[") {
-		escaped = "\\[";
-	}
-	if (exclude_newline) {
-		escaped += "\r\n";
-	}
+  if (ch === ']') {
+    escaped = '\\]';
+  }
+  if (ch === '[') {
+    escaped = '\\[';
+  }
+  if (exclude_newline) {
+    escaped += '\r\n';
+  }
 
-	return choice(new RegExp(`[^${escaped}]`), ...mapped, ...args);
+  return choice(new RegExp(`[^${escaped}]`), ...mapped, ...args);
 }
 
 exports.commaSep1 = commaSep1;
