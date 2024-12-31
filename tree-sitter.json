@@ -1,0 +1,33 @@
+{
+  "grammars": [
+    {
+      "name": "plantuml",
+      "camelcase": "Plantuml",
+      "scope": "source.plantuml",
+      "file-types": [".plantuml"],
+      "injection-regex": "^plantuml$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "Apache 2.0",
+    "description": "Plantuml grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "loongtao.zhang",
+        "email": "loongtao.zhang@outlook.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/cathaysia/tree-sitter-plantuml"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}

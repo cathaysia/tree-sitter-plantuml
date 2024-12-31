@@ -1,0 +1,19 @@
+{
+  "type": "commonjs",
+  "name": "tree-sitter-plantuml_sequence",
+  "scripts": {
+    "install": "node-gyp-build",
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "pnpm build && tree-sitter test -u",
+    "build": "tree-sitter generate"
+  },
+  "devDependencies": {
+    "prebuildify": "^6.0.1",
+    "tree-sitter-cli": "^0.24.6"
+  },
+  "dependencies": {
+    "node-addon-api": "^8.3.0",
+    "node-gyp-build": "^4.8.4"
+  }
+}
